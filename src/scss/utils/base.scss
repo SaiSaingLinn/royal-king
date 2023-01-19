@@ -1,0 +1,46 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  outline: none;
+  
+  &:focus-visible:not([disabled]):not([readonly]) {
+    outline: 2px solid $lightBlue;
+    outline-offset: 0;
+    transition: outline 0s;
+  }
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #000;
+  line-height: 1.4;
+  font: {
+    family: $font;
+    size: 16px;
+    weight: 400;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  color: #000;
+  transition: color .3s ease;
+  text-decoration: none;
+  &:hover {
+    color: transparentize(#000, 0.2);
+  }
+}

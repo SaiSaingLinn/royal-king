@@ -1,0 +1,114 @@
+footer {
+  background: rgba($color: #142535, $alpha: .9);
+  color: #CCC;
+  .top-footer {
+    padding-bottom: 30px;
+    .top-footer-row {
+      row-gap: 30px;
+    }
+    .footer-logo {
+      background: #223241;
+      border-radius: 0 0 140px 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 50px 0;
+      margin-right: 20px;
+      margin-left: 20px;
+      @media screen and (max-width: 1199px) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .logo {
+        margin-bottom: 22px;
+        img {
+        width: 250px; 
+        }
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 15px;
+        img {
+          width: 25px;
+        }
+      }
+    }
+    .footer-info {
+      padding-top: 50px;
+      .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #FFF;
+      }
+      p {
+        color: #CCCCCC;
+        font-size: 16px;
+      }
+      .contact-info {
+        p {
+          margin-bottom: 15px;
+          display: flex;
+          .icon {
+            flex: none;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            border: 2px solid #FFF;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            i {
+              color: #FFF;
+            }
+          }
+          span {
+            a {
+              color: #CCC;
+            }
+          }
+          span.phone {
+            a {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom-footer {
+    padding: 25px 0;
+    font-size: 16px;
+    color: #CCCCCC;
+    .bottom-footer-row {
+      row-gap: 20px;
+    }
+    .copyright {
+      a {
+        color: #ADCE00;
+      }
+    }
+    .footer-menu {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @media screen and (max-width: 767px) {
+          justify-content: flex-start;
+        }
+        li {
+          a {
+            color: #CCCCCC;
+          }
+        }
+      }
+    }
+  }
+}
