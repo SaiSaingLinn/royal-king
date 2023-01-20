@@ -1,24 +1,56 @@
 .header {
   background: rgba($color: #142535, $alpha: .9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  @media screen and (max-width: 991px) {
+    position: relative;
+  }
   .header__wrapper {
     .navbar {
       .navbar-container {
         justify-content: flex-start;
+        @media screen and (max-width: 991px) {
+          justify-content: space-between;
+        }
         .navbar-brand {
           margin-right: 100px;
+          padding: 0;
+          @media screen and (max-width: 991px) {
+            margin-right: 0;
+          }
           img {
             width: 180px;
-            height: 120px;
+            @media screen and (max-width: 991px) {
+              width: 150px;
+            }
+            @media screen and (max-width: 767px) {
+              width: 120px;
+            }
+          }
+        }
+        .navbar-toggler {
+          &:focus {
+            box-shadow: 0 0 0 1px;
+          }
+          .navbar-toggler-icon {
+            width: 24px;
+            height: 24px;
           }
         }
         .navbar-content-wrapper {
           width: 100%;
           display: flex;
           flex-direction: column;
-          row-gap: 70px;
+          row-gap: 30px;
           .contact-info {
             display: flex;
             justify-content: flex-end;
+            @media screen and (max-width: 991px) {
+              display: none;
+            }
             .contact-info__item {
               margin-right: 10px;
               a {

@@ -1,0 +1,27 @@
+mixin home-banner
+  #carouselBannerCaptions.carousel.slide.home-banner-slider(data-bs-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src=require("@/assets/images/static/banner1.jpg") alt='image')
+        .container.caption-wrapper
+          .carousel-caption.d-none.d-md-block
+            h5 Myanmar Real Estate
+            p Buy & Rent Property
+      .carousel-item
+        img.d-block.w-100(src=require("@/assets/images/static/banner2.jpg") alt='image')
+        .container.caption-wrapper
+          .carousel-caption.d-none.d-md-block
+            h5 Second slide label
+            p Content for the second slide
+      .carousel-item
+        img.d-block.w-100(src=require("@/assets/images/static/banner3.jpg") alt='image')
+        .container.caption-wrapper
+          .carousel-caption.d-none.d-md-block
+            h5 Third slide label
+            p Content for the third slide
+    button.carousel-control-prev(type='button' data-bs-target='#carouselBannerCaptions' data-bs-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.visually-hidden Previous
+    button.carousel-control-next(type='button' data-bs-target='#carouselBannerCaptions' data-bs-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.visually-hidden Next
