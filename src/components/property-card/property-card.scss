@@ -1,0 +1,89 @@
+.card-wrapper {
+  border-radius: 5px 5px 0 0;
+  .card {
+    overflow: hidden;
+    .card-image {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .card-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 15px;
+        .card-label-text {
+          padding: 5px 10px;
+          font-size: 14px;
+          color: #FFF;
+          text-transform: uppercase;
+          border-radius: 3px;
+          &.rent {
+            background: #A87619;
+          }
+          &.sale {
+            background: #1BA7E8;
+          }
+        }
+      }
+    }
+    .card-content {
+      padding: 15px;
+      .price-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        .card-price {
+          font-size: 24px;
+          font-weight: 600;
+          color: #1B40E8;
+          margin-right: 10px;
+        }
+        .card-bank {
+          font-size: 16px;
+          color: #2FB184;
+          padding: 3px 7px;
+          border-radius: 6px;
+          border: 1px solid #2FB184;
+          margin-bottom: 0;
+        }
+        .card-month {
+          font-size: 18px;
+        }
+      }
+      .card-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .card-location {
+        font-size: 18px;
+        margin-bottom: 16px;
+        i {
+          margin-right: 10px;
+          &::before {
+            font-weight: bold !important;
+          }
+        }
+      }
+      .card-footer {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        .card-footer-icon {
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 5px;
+          }
+          .card-footer-text {
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

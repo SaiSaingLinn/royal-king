@@ -1,0 +1,21 @@
+include ../property-card/property-card
+
+mixin property-sale
+  .property-sale-wrapper 
+    .container 
+      h2.title Featured Properties For Sale
+    .card-lists 
+      .container 
+        .row.card-lists-row
+          .col-12.col-sm-6.col-lg-4 
+            +property-card('sale', 'bank', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')

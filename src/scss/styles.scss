@@ -6,6 +6,12 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 
+// import slick slider scss
+$slick-font-path: "~slick-slider/slick/fonts/";
+$slick-loader-path: "~slick-slider/slick/";
+@import "~slick-slider/slick/slick";
+@import "~slick-slider/slick/slick-theme";
+
 @import './utils/fonts';
 @import './utils/base';
 
@@ -14,3 +20,8 @@
 @import '@/components/footer/footer';
 @import '@/components/home-banner/home-banner';
 @import '@/components/search-tab/search-tab';
+@import '@/components/news-slider/news-slider';
+@import '@/components/property-service/property-service';
+@import '@/components/property-card/property-card';
+@import '@/components/property-rent/property-rent';
+@import '@/components/property-sale/property-sale';

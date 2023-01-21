@@ -1,0 +1,92 @@
+.news-slider-wrapper {
+  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+  .news-slider {
+    .slick-track {
+      display: flex;
+      column-gap: 0px;
+      @media screen and (min-width: 768px) {
+        column-gap: 3px;
+      }
+      @media screen and (min-width: 992px) {
+        column-gap: 30px;
+      }
+    }
+    .news-slider__item {
+      .news-slider-item__image {
+        position: relative;
+        .slide-img {
+          width: 100%;
+        }
+        .news-slider-item__content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: #FFF;
+          font-size: 20px;
+          background: transparent linear-gradient(180deg, #00000000 0%, #000000C7 100%) 0% 0% no-repeat padding-box;
+          padding: 20px;
+          padding-bottom: 20px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &:hover {
+        .news-slider-item__image {
+          .news-slider-item__content {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+    .slick-arrow {
+      width: 48px;
+      height: 48px;
+      background: #EBEBEB;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      @media screen and (max-width: 1199px) {
+        display: none !important;
+      }
+      &:hover {
+        background: $primary;
+        &::before {
+          transform: translateX(0);
+        }
+      }
+    }
+    .slick-next {
+      right: -60px;
+      &::before {
+        background: url('@/assets/images/icons/arrow-round-next.svg') no-repeat center center;
+        transform: translateX(-10px);
+      }
+    }
+    .slick-prev {
+      left: -60px;
+      &::before {
+        background: url('@/assets/images/icons/arrow-round-prev.svg') no-repeat center center;
+        transform: translateX(10px);
+      }
+    }
+    .slick-next, .slick-prev {
+      &::before {
+        content: '';
+        width: 25px;
+        height: 16px;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .slick-dots {
+      li {
+        button {
+          &::before {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}

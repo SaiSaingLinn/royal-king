@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const PugPlugin = require('pug-plugin');
 const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin');
+const webpack = require('webpack');
 
 const IS_DEV = process.env.NODE_ENV === 'development';
 
@@ -75,7 +76,13 @@ module.exports = {
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/, '.html')}`,
     })),
-    new BeautifyHtmlWebpackPlugin()
+    new BeautifyHtmlWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      'window.$': 'jquery'
+    })
   ],
   module: {
     rules: [{
