@@ -1,10 +1,10 @@
-mixin header
-  header.header
+mixin header(type)
+  header.header(style = type === 'absolute' ? 'position: absolute' : 'position: relative')
     .header__wrapper.wrapper
       nav.navbar.navbar-expand-lg.navbar-dark
         .container.navbar-container
           a.navbar-brand(href='#')
-            img.img-fluid(src=require("@/assets/images/static/K-Logo.png") alt='image')
+            img.img-fluid(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
           button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-content')
             span.navbar-toggler-icon
           .navbar-content-wrapper
@@ -18,63 +18,13 @@ mixin header
                   i.bi.bi-phone
                   span +1 234 567 890
               .contact-info__item
-                i.bi.bi-flag-fill
+                img(src=require("@/assets/images/icons/myanmar.png") alt='image')
             #navbar-content.collapse.navbar-collapse
               ul.navbar-nav.mr-auto.mb-2.mb-lg-0
                 li.nav-item
                   a.nav-link.active(aria-current='page' href='#') Home
-                li.nav-item.dropdown
-                  a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Multilevel
-                  ul.dropdown-menu.shadow
-                    li
-                      a.dropdown-item(href='#') Gallery
-                    li
-                      a.dropdown-item(href='blog.html') Blog
-                    li.dropstart
-                      a.dropdown-item.dropdown-toggle(href='#' data-bs-toggle='dropdown') Submenu Left
-                      ul.dropdown-menu.shadow
-                        li
-                          a.dropdown-item(href='')  Third level 1
-                        li
-                          a.dropdown-item(href='')  Third level 2
-                        li
-                          a.dropdown-item(href='')  Third level 3
-                        li
-                          a.dropdown-item(href='')  Third level 4
-                        li
-                          a.dropdown-item(href='')  Third level 5
-                    li.dropend
-                      a.dropdown-item.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Submenu Right
-                      ul.dropdown-menu.shadow
-                        li
-                          a.dropdown-item(href='')  Second level 1
-                        li
-                          a.dropdown-item(href='')  Second level 2
-                        li
-                          a.dropdown-item(href='')  Second level 3
-                        li.dropend
-                          a.dropdown-item.dropdown-toggle(href='#' data-bs-toggle='dropdown') Let&apos;s go deeper!
-                          ul.dropdown-menu.dropdown-submenu.shadow
-                            li
-                              a.dropdown-item(href='')  Third level 1
-                            li
-                              a.dropdown-item(href='')  Third level 2
-                            li
-                              a.dropdown-item(href='')  Third level 3
-                            li
-                              a.dropdown-item(href='')  Third level 4
-                            li
-                              a.dropdown-item(href='')  Third level 5
-                        li
-                          a.dropdown-item(href='')  Third level 5
-                    li
-                      hr.dropdown-divider
-                    li
-                      a.dropdown-item(href='#') Something else here
-                li.nav-item
-                  a.nav-link(href='#') Link
                 li.nav-item.dropdown.dropdown-mega.position-static
-                  a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Megamenu
+                  a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') For Sale
                   .dropdown-menu.shadow
                     .mega-content
                       .row
@@ -118,4 +68,26 @@ mixin header
                                 span Industrial Zone
                         .col-12.col-sm-4.col-md-4
                           .card
-                            img.img-fluid(src=require("@/assets/images/favicons/144x144.png") alt='image')
+                            img.img-fluid(src=require("@/assets/images/static/card.jpg") alt='image')
+                li.nav-item
+                  a.nav-link(href='#') For Rent
+                li.nav-item
+                  a.nav-link(href='#') Bank Installment
+                li.nav-item.dropdown
+                  a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Contact For Owner
+                  ul.dropdown-menu.shadow
+                    li
+                      a.dropdown-item(href='#') For Sell
+                    li
+                      a.dropdown-item(href='#') For Rent
+                li.nav-item.dropdown
+                  a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Services
+                  ul.dropdown-menu.shadow
+                    li
+                      a.dropdown-item(href='#') Loan
+                    li
+                      a.dropdown-item(href='#') Mortgage
+                li.nav-item
+                  a.nav-link(href='#') News & Update
+                li.nav-item
+                  a.nav-link(href='#') About Us

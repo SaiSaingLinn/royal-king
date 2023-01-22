@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/detail-banner/detail-banner
+
+block variables
+  - const title = 'Detail'
+  - const description = 'Page description'
+
+block content
+  +header('relative')
+  .wrapper
+    +detail-banner

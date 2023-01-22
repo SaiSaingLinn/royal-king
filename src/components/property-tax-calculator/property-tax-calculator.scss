@@ -1,0 +1,42 @@
+.property-tax-cal-wrapper {
+  background: transparent linear-gradient(270deg, #142535 0%, #3B4230 35%, #E8C31B 100%) 0% 0% no-repeat padding-box;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #FFF;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  .desc {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #FFF;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .custom-btn {
+    background: #FFF;
+    display: inline-flex;
+    align-items: center;
+    color: #333333;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    img {
+      width: 18px;
+      margin-right: 10px;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}

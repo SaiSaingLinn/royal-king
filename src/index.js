@@ -9,3 +9,4 @@ import 'slick-slider';
 
 // import all components ui
 import '@/components/news-slider/news-slider';
+import '@/components/detail-banner/detail-banner';

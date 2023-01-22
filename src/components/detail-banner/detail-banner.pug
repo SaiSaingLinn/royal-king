@@ -1,0 +1,56 @@
+mixin detail-banner
+  .detail-banner-slider-wrapper 
+    .detail-banner-slider
+      .detail-banner-slider__item
+        .detail-banner-slider-item__image
+          img.slide-img(src=require('@/assets/images/static/detail-banner1.jpg') alt='image')
+      .detail-banner-slider__item
+        .detail-banner-slider-item__image
+          img.slide-img(src=require('@/assets/images/static/detail-banner2.jpg') alt='image')
+      .detail-banner-slider__item
+        .detail-banner-slider-item__image
+          img.slide-img(src=require('@/assets/images/static/detail-banner3.jpg') alt='image')
+      .detail-banner-slider__item
+        .detail-banner-slider-item__image
+          img.slide-img(src=require('@/assets/images/static/detail-banner4.jpg') alt='image')
+    .modal-action-wrapper 
+      button.btn.btn-primary.custom-btn(type='button', data-bs-toggle='modal', data-bs-target='#videoTour')
+        i.bi.bi-camera-video-fill
+        | Video Tour
+      button.btn.btn-primary.custom-btn(type='button', data-bs-toggle='modal', data-bs-target='#photoTour')
+        i.bi.bi-camera-eye-fill
+        | See All Photos
+      #videoTour.modal.fade(tabindex='-1', aria-labelledby='videoTourLabel', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.container
+          .modal-content
+            .modal-header
+              h1#videoTourLabel.modal-title.fs-5 Video
+              button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            .modal-body
+              iframe(width='100%', height='600', src='https://www.youtube.com/embed/KU-bOrrg8uo', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share', allowfullscreen='')
+      #photoTour.modal.fade(tabindex='-1', aria-labelledby='photoTourLabel', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.container
+          .modal-content
+            .modal-header
+              h1#photoTourLabel.modal-title.fs-5 Photo
+              button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            .modal-body
+              .row.photo-tour-row
+                .col-12.col-md-4
+                  .row.photo-nav-row
+                    .col-4.col-md-6
+                      .photo-tour-item#photo-nav
+                        img(src=require('@/assets/images/static/detail-banner1.jpg') alt='image')
+                    .col-4.col-md-6
+                      .photo-tour-item#photo-nav
+                        img(src=require('@/assets/images/static/detail-banner2.jpg') alt='image')
+                    .col-4.col-md-6
+                      .photo-tour-item#photo-nav
+                        img(src=require('@/assets/images/static/detail-banner3.jpg') alt='image')
+                    .col-4.col-md-6
+                      .photo-tour-item#photo-nav
+                        img(src=require('@/assets/images/static/detail-banner4.jpg') alt='image')
+                .col-12.col-md-8
+                  .photo-tour-item#photo-content
+                    img(src=require('@/assets/images/static/detail-banner1.jpg') alt='image')
+

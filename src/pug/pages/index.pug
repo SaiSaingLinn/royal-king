@@ -1,20 +1,24 @@
 extends ../layouts/main
+include /components/header/header
 include /components/home-banner/home-banner
 include /components/search-tab/search-tab
 include /components/news-slider/news-slider
 include /components/property-service/property-service
 include /components/property-rent/property-rent
 include /components/property-sale/property-sale
+include /components/property-tax-calculator/property-tax-calculator
 
 block variables
   - const title = 'Home'
   - const description = 'Page description'
 
 block content
-  .wrapper(style="background: #f5f5f5;")
+  +header('absolute')
+  .wrapper
     +home-banner
     +search-tab
     +news-slider
     +property-service
-    +property-rent
     +property-sale
+    +property-tax-calculator
+    +property-rent

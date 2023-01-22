@@ -1,11 +1,29 @@
 .card-wrapper {
   border-radius: 5px 5px 0 0;
+  &:hover {
+    .card {
+      .card-image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      .card-content {
+        .price-wrap {
+          .card-price {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
   .card {
     overflow: hidden;
     .card-image {
       position: relative;
+      overflow: hidden;
       img {
         width: 100%;
+        transition: all 0.3s ease;
       }
       .card-label {
         position: absolute;
@@ -19,10 +37,10 @@
           text-transform: uppercase;
           border-radius: 3px;
           &.rent {
-            background: #A87619;
+            background: #1BA7E8;
           }
           &.sale {
-            background: #1BA7E8;
+            background: #A87619;
           }
         }
       }
@@ -38,6 +56,7 @@
           font-weight: 600;
           color: #1B40E8;
           margin-right: 10px;
+          transition: all 0.3s ease;
         }
         .card-bank {
           font-size: 16px;
