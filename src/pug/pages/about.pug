@@ -1,12 +1,9 @@
 extends ../layouts/main
+include /components/test/test
 
 block variables
-  - const title = 'About Pure Start'
+  - const title = 'About Start'
   - const description = 'About description'
 
 block content
-  section.container 
-    .wrapper
-      h1(style="margin: 35px 0") About Pure Start 
-        sup(style="font-size: 12px") v2.0.2
-      h3(style="margin-bottom: 25px") Components examples
+  +map-test

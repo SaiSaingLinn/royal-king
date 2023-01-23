@@ -10,3 +10,5 @@ import 'slick-slider';
 // import all components ui
 import '@/components/news-slider/news-slider';
 import '@/components/detail-banner/detail-banner';
+import '@/components/detail-info/detail-info';
+import '@/components/test/test';

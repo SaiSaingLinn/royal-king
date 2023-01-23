@@ -44,24 +44,6 @@
         }
         .search-form-wrapper {
           .search-form {
-            .input-group {
-              .input-group-text {
-                background: transparent;
-                padding-right: 0;
-              }
-              .form-control, .form-select {
-                border-radius: 0 5px 5px 0px;
-                border-left: 0 none;
-                &:focus {
-                  box-shadow: none;
-                  border: 1px solid #ced4da;
-                  border-left: 0 none;
-                }
-                &:focus-visible {
-                  outline: none;
-                }
-              }
-            }
             .form-group {
               #search-submit {
                 text-transform: uppercase;

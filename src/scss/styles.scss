@@ -14,6 +14,7 @@ $slick-loader-path: "~slick-slider/slick/";
 
 @import './utils/fonts';
 @import './utils/base';
+@import './utils/inputIcon';
 
 // // components
 @import '@/components/header/header';
@@ -27,3 +28,4 @@ $slick-loader-path: "~slick-slider/slick/";
 @import '@/components/property-sale/property-sale';
 @import '@/components/property-tax-calculator/property-tax-calculator';
 @import '@/components/detail-banner/detail-banner';
+@import '@/components/detail-info/detail-info';

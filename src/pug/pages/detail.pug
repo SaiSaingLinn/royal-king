@@ -1,6 +1,7 @@
 extends ../layouts/main
 include /components/header/header
 include /components/detail-banner/detail-banner
+include /components/detail-info/detail-info
 
 block variables
   - const title = 'Detail'
@@ -10,3 +11,4 @@ block content
   +header('relative')
   .wrapper
     +detail-banner
+    +detail-info

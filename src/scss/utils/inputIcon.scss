@@ -1,0 +1,38 @@
+.input-group {
+  &.icon-left {
+    .input-group-text {
+      background: transparent;
+      padding-right: 0;
+    }
+    .form-control, .form-select {
+      border-radius: 0 5px 5px 0px;
+      border-left: 0 none;
+      &:focus {
+        box-shadow: none;
+        border: 1px solid #ced4da;
+        border-left: 0 none;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+  &.icon-right {
+    .input-group-text {
+      background: transparent;
+      padding-left: 0;
+    }
+    .form-control, .form-select {
+      border-radius: 5px 0 0 5px;
+      border-right: 0 none;
+      &:focus {
+        box-shadow: none;
+        border: 1px solid #ced4da;
+        border-right: 0 none;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}
