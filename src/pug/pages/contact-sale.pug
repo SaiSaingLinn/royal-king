@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/contact-form/contact-form
+
+block variables
+  - const title = 'Contact Sale'
+  - const description = 'Contact Sale'
+
+block content
+  +header('relative')
+  .wrapper
+    +contact-form('sale')

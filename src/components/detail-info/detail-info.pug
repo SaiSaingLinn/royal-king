@@ -1,3 +1,5 @@
+include ../property-card/property-card
+
 mixin detail-info
   .detail-info-wrapper 
     .container 
@@ -272,3 +274,15 @@ mixin detail-info
                     p 
                       span Owner: 3 Lakhs 
                       | (10% of rental income)
+  .similar-wrapper 
+    .container 
+      h2.title Find More Similar Properties
+    .card-lists 
+      .container 
+        .row.card-lists-row
+          .col-12.col-sm-6.col-lg-4 
+            +property-card('sale', 'bank', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')
+          .col-12.col-sm-6.col-lg-4
+            +property-card('sale', '', '')

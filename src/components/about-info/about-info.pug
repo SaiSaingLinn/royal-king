@@ -1,0 +1,62 @@
+mixin about-info
+  .about-info-wrapper 
+    .container 
+      .row.about-info-row
+        .col-12.col-lg-6 
+          .about-info-img
+            img(src=require('@/assets/images/static/card.jpg') alt='image')
+        .col-12.col-lg-6 
+          .about-info-logo 
+            img.img-fluid(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
+          .about-info-desc
+            h2.title About Us
+            p.date Since 2003
+            p.desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            p.social
+              | Follow Us:
+              a(href='#')
+                img(src=require("@/assets/images/icons/facebook.png") alt='image')
+            p.hotline 
+              span Hot Line: 
+              a(href='tel:+1234567890') 1234567890
+
+  .about-info-contact 
+    .container 
+      .row.about-info-contact-row
+        .col-12.col-md-4 
+          .about-info-contact-item 
+            img(src=require("@/assets/images/icons/contact-email.png") alt='image')
+            h3.title Address
+            p.desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+        .col-12.col-md-4
+          .about-info-contact-item 
+            img(src=require("@/assets/images/icons/contact-phone-call.png") alt='image')
+            h3.title Phone
+            p.desc.link
+              a(href='tel:+1234567890') 1234567890
+              br
+              a(href='tel:+1234567890') 1234567890
+        .col-12.col-md-4
+          .about-info-contact-item 
+            img(src=require("@/assets/images/icons/contact-email.png") alt='image')
+            h3.title Email
+            p.desc.link
+              a(href='mailto:info@royalking.com') info@royalking.com
+              br
+              a(href='mailto:hello@royalking.com') hello@royalking.com
+
+  .about-info-mobile 
+    .container 
+      .row.about-info-mobile-row 
+        .col-12.col-md-6 
+          .about-info-mobile-item 
+            h3.title Royal King Real Estate Mobile App is Available Now!
+            p.desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            .mobile-btn 
+              a(href='#', target='_blank')
+                img(src=require('@/assets/images/icons/google-play.png') alt='image')
+              a(href='#', target='_blank')
+                img(src=require('@/assets/images/icons/app-store.png') alt='image')
+        .col-12.col-md-6
+          .about-info-mobile-item-right
+            img(src=require('@/assets/images/static/mobile-app.png') alt='image')

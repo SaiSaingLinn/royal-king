@@ -1,0 +1,80 @@
+mixin contact-form(type)
+  .contact-form-wrapper 
+    .container
+      .row 
+        .col-12 
+          h1.title Contact For #{type}
+          p.desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    .container
+      .row
+        .col-12
+          form(action="#" method="post")
+            .info-form.form-wrap
+              h3.sub-title Property Information 
+              .row 
+                .col-12.col-lg-10.offset-lg-1
+                  .row
+                    .col-12.col-md-6 
+                      .mb-3
+                        label.form-label.required(for='propertyType') Property Type
+                        select#propertyType.form-select(aria-label='Property Type')
+                          option(selected='') Property Type
+                          option(value='1') Condon
+                          option(value='2') House
+                      .mb-3
+                        label.form-label.required(for='price') Price
+                        input#price.form-control(type='text')
+                      if type === 'rent'
+                        .check-wrap.mb-3
+                          .form-check
+                            input#urgentSale.form-check-input(type='checkbox', value='')
+                            label.form-check-label(for='urgentSale')
+                              | Urgent Sale
+                          .form-check
+                            input#needDeposit.form-check-input(type='checkbox', value='')
+                            label.form-check-label(for='needDeposit')
+                              | Need Deposit Payment
+                        .mb-3
+                          label.form-label(for='contract') Contract
+                          input#contract.form-control(type='text')
+                      if type === 'sale'
+                        .mb-3
+                          label.form-label.required(for='address') Property Address
+                          textarea#address.form-control(rows='2')
+                      .mb-3
+                        label.form-label.required(for='description') Property Description
+                        textarea#description.form-control(rows='3')
+                    .col-12.col-md-6 
+                      if type === 'rent'
+                        .mb-3
+                          label.form-label.required(for='address') Property Address
+                          textarea#address.form-control(rows='2')
+                      .mb-3
+                        label.form-label(for='map') Map
+                        p Map will go here
+                      if type === 'sale'
+                        .mb-3 
+                          .form-check
+                            input#urgentSale.form-check-input(type='checkbox', value='')
+                            label.form-check-label(for='urgentSale')
+                              | Urgent Sale
+
+            .contact-form.form-wrap
+              h3.sub-title Contact Information
+              .row 
+                .col-12.col-lg-10.offset-lg-1
+                  .row
+                    .col-12.col-md-6 
+                      .mb-3
+                        label.form-label.required(for='name') Name
+                        input#name.form-control(type='text')
+                      .mb-3
+                        label.form-label.required(for='phone') Phone
+                        input#phone.form-control(type='text')
+                    .col-12.col-md-6 
+                      .mb-3
+                        label.form-label(for='email') Email
+                        input#email.form-control(type='email')
+                  .btn-wrap 
+                    button.btn.btn-secondary(type='reset') Cancel
+                    button.btn.btn-primary(type='submit') Send

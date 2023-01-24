@@ -1,0 +1,139 @@
+.about-info-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .about-info-row {
+    row-gap: 30px;
+    .about-info-img {
+      img {
+        width: 100%;
+      }
+    }
+    .about-info-logo {
+      img {
+        width: 130px;
+        margin-bottom: 10px;
+      }
+    }
+    .about-info-desc {
+      .title {
+        font-size: 32px;
+        font-family: 'DM Serif Display', serif;
+        margin-bottom: 10px;
+        @media screen and (max-width: 767px) {
+          font-size: 24px;
+        }
+      }
+      .date {
+        font-size: 20px;
+        color: #00000099;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+      .desc {
+        margin-bottom: 20px;
+      }
+      .social {
+        margin-bottom: 15px;
+        img {
+          width: 24px;
+          margin-left: 16px;
+        }
+      }
+      .hotline {
+        span {
+          font-size: 28px;
+          font-family: 'DM Serif Display', serif;
+          color: $primary;
+          margin-right: 15px;
+          @media screen and (max-width: 767px) {
+            font-size: 22px;
+          }
+        }
+        a {
+          color: #00000099;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.about-info-contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #F5F5F5;
+  .about-info-contact-row {
+    row-gap: 30px;
+    .about-info-contact-item {
+      text-align: center;
+      img {
+        width: 60px;
+        margin-bottom: 12px;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .desc {
+        &.link {
+          a {
+            color: #A8A8A8;
+            text-decoration: underline;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-info-mobile {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .about-info-mobile-row {
+    row-gap: 30px;
+    .about-info-mobile-item {
+      img {
+        width: 60px;
+        margin-bottom: 12px;
+      }
+      .title {
+        font-size: 32px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 767px) {
+          font-size: 24px;
+        }
+      }
+      .desc {
+        &.link {
+          a {
+            color: #A8A8A8;
+            text-decoration: underline;
+            font-size: 18px;
+          }
+        }
+      }
+      .mobile-btn {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        a {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          img {
+            width: 150px;
+          }
+        }
+      }
+    }
+    .about-info-mobile-item-right {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

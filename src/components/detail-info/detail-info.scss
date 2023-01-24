@@ -233,3 +233,21 @@
     }
   }
 }
+
+.similar-wrapper {
+  padding: 50px 0;
+  background: #F5F5F5;
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .card-lists {
+    .card-lists-row {
+      row-gap: 30px;
+    }
+  }
+}

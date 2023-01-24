@@ -1,0 +1,55 @@
+.contact-form-wrapper {
+  background: url('@/assets/images/static/contact-form-bg.png') no-repeat center/cover;
+  padding: 60px 0;
+  .title {
+    font-size: 32px;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  .desc {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .form-wrap {
+    margin-bottom: 30px;
+    label {
+      font-weight: 600;
+    }
+    .check-wrap {
+      display: flex;
+      column-gap: 50px;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        row-gap: 10px;  
+      }
+    }
+    .sub-title {
+      font-size: 24px;
+      font-family: 'DM Serif Display', serif;
+      margin-bottom: 30px;
+      text-align: center;
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
+    .btn-wrap {
+      display: flex;
+      column-gap: 30px;
+      justify-content: center;
+      margin-top: 20px;
+      .btn {
+        min-width: 240px;
+        font-weight: 500;
+        text-transform: uppercase;
+        @media screen and (max-width: 767px) {
+          min-width: 120px;
+        }
+      }
+    } 
+  }
+}

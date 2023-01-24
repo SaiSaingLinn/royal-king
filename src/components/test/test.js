@@ -1,10 +1,18 @@
 // click on .map-action__item(data-target="#content") and scroll to specific .city-content__item#content
-$('.map-action__item').on('click', function(e) {
-    e.preventDefault();
-    var target = $(this).data('target');
-    
-    var targetOffset = $(target).offset().top;
-    $('.city-content').animate({
-        scrollTop: targetOffset
-    }, 500);
+let mapItem = document.querySelectorAll('.map-action__item');
+let cityItem = document.querySelectorAll('.city-content__item');
+let cityContentWindow = document.querySelector('.city-content');
+mapItem.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    cityItem.forEach((item, index) => {
+      item.classList.remove('active');
+    });
+    cityItem[index].classList.add('active');
+
+    // scroll to active cityItem
+    cityContentWindow.scrollTo({
+      top: cityItem[index].offsetTop,
+      behavior: 'smooth'
+    });
+  });
 });

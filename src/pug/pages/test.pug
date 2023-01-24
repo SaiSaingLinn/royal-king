@@ -1,0 +1,9 @@
+extends ../layouts/main
+include /components/test/test
+
+block variables
+  - const title = 'About Start'
+  - const description = 'About description'
+
+block content
+  +map-test

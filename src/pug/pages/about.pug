@@ -1,9 +1,12 @@
 extends ../layouts/main
-include /components/test/test
+include /components/header/header
+include /components/about-info/about-info
 
 block variables
-  - const title = 'About Start'
-  - const description = 'About description'
+  - const title = 'About Us'
+  - const description = 'Royal King Real Estate is a real estate agency in Yangon, Myanmar. We provide a wide range of real estate services including property sales, property rentals, property management, and property development.'
 
 block content
-  +map-test
+  +header('relative')
+  .wrapper
+    +about-info
