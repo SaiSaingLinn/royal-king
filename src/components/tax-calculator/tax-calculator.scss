@@ -1,0 +1,68 @@
+.tax-cal-wrapper {
+  background: url('@/assets/images/static/contact-form-bg.png') no-repeat center/cover;
+  padding: 60px 0;
+  @media screen and (max-width: 767px) {
+    padding: 30px 0;
+  }
+  .title {
+    font-size: 32px;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  .desc {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .form-wrap {
+    .tab-row {
+      align-items: flex-end;
+      row-gap: 30px;
+    }
+    .form-label {
+      font-weight: 600;
+    }
+    .offer-check-wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+    .btn {
+      text-transform: uppercase;
+      font-weight: 500;
+      min-width: 100%;
+    }
+    .result {
+      margin-bottom: 20px;
+      p {
+        padding: 20px 15px;
+        background: #EBEBEB;
+        border-radius: 5px;
+        span {
+          font-weight: 600;
+          font-size: 22px;
+          margin-bottom: 10px;
+          display: block;
+          @media screen and (max-width: 767px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .tax-desc {
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+}

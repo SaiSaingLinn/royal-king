@@ -1,0 +1,56 @@
+mixin tax-calculator
+  .tax-cal-wrapper 
+    .container
+      .row 
+        .col-12.col-lg-6.offset-lg-3
+          h1.title  Property Tax Calculator
+          p.desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          .form-wrap
+            form(action="#")
+              .mb-3
+                label.form-label(for='offerTypes') Offer Type
+                .offer-check-wrap(id="nav-tab" role="tablist")
+                  .form-check
+                    input#forSale.form-check-input(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-sale", aria-controls="nav-sale" aria-selected="false")
+                    label.form-check-label(for='forSale')
+                      | Property For Sale
+                  .form-check
+                    input#forRent.form-check-input.active(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-rent", aria-controls="nav-rent" aria-selected="true")
+                    label.form-check-label(for='forRent')
+                      | Property For Rent
+                #nav-tabContent.tab-content
+                  #nav-sale.tab-pane.fade(role='tabpanel', aria-labelledby='nav-sale-tab', tabindex='0')
+                    .row.tab-row
+                      .col-12.col-lg-8
+                        label.form-label(for='rentPrice') Property Sale Price
+                        .input-group.icon-right
+                          input.form-control#rentPrice(type='text', placeholder="Enter Price", aria-label="rentPrice", aria-describedby='rentPriceAddon')
+                          span#rentPriceAddon.input-group-text Lakhs
+                      .col-12.col-lg-4
+                          button.btn.btn-primary(type='submit') Calculate
+
+                  #nav-rent.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')
+                    .row.tab-row
+                      .col-12.col-lg-8
+                        label.form-label(for='salePrice') Property Rent Price
+                        .input-group.icon-right
+                          input.form-control#salePrice(type='text', placeholder="Enter Price", aria-label="salePrice", aria-describedby='salePriceAddon')
+                          span#salePriceAddon.input-group-text Lakhs
+                      .col-12.col-lg-4
+                        button.btn.btn-primary(type='submit') Calculate
+              .result 
+                p 
+                  span Buyer: 15 Lakhs
+                  span Seller: 10% of profit
+          p.tax-desc 
+            | အသုံးပြုသည့်ဝင်ငွေမှ ဝင်ငွေရလမ်းတင်ပြနိုင်သည့် ယင်းဝင်ငွေအားနုတ်ပယ်ပြီး ကျန်စည်းကြပ်မှုမှ လွတ်ကင်းနေသော ဝင်ငွေအပေါ်တွင်လည်းကောင်း၊ ဝင်ငွေရလမ်း တင်ပြနိုင်ခြင်းမရှိပါက အသုံးပြုသည့် ဝင်ငွေအပေါ်တွင်လည်းကောင်း အောက်ဖော်ပြပါ အခွန်နှုန်းထားအတိုင်း ဝင်ငွေခွန်စည်းကြပ်ရမည်။
+          p.tax-desc 
+            | ၂၀၁၉ခုနှစ်ပြည်ထောင်စု၏အခွန် အ ကောက်ဥပ ဒေ အရ
+          ul 
+            li ၁ကျပ် မှ သိန်း ၁၀၀၀ ၃ ရာခိုင်နှုန်း 
+            li သိန်း ၁၀၀၁ မှ သိန်း ၃၀၀၀ ၅ ရာခိုင်နှုန်း 
+            li သိန်း ၃၀၀၁ မှ သိန်း ၁၀၀၀၀ ၁၀ ရာခိုင်နှုန်း 
+            li သိန်း ၁၀၀၀၁ မှ သိန်း ၃၀၀၀၀ ၁၅ ရာခိုင်နှုန်း 
+            li သိန်း ၃၀၀၀၁ နှင့်အထက် ၃၀ ရာခိုင်နှုန်း 
+          p.tax-desc 
+            | တံဆိပ်ခေါင်းခွန် (၂၀၁၄ခုနှစ်၊ မြန်မာနိုင်ငံတံဆိပ်ခေါင်းအက်ဥပဒေကို ပြင်ဆင်သည့်ဥပဒေ) မြန်မာနိုင်ငံအတွင်း မည်သည့်မြို့နယ်တွင် တည်ရှိသော အိမ်၊ မြေ၊ အဆောက်အအုံကို ဝယ်ယူသည်ဖြစ်စေ၊ လဲလှယ်သည်ဖြစ်စေ သတ်မှတ်သည့် ကာလတန်ဖိုးအပေါ်တွင် တံဆိပ် ခေါင်းခွန် ၂%အပြင် အပိုတံဆိပ်ခေါင်းခွန် ၂% စုစုပေါင်း ၄% ပေးဆောင်ရမည်။ မှတ်ပုံတင်စာချုပ်ချုပ်ဆိုရန် မှတ်ပုံတင်ခ ဝ.၅% (စိုက်ပျိုးရေး၊ မွေးမြူရေးနှင့် ဆည်မြောင်းဝန်ကြီးဌာန၊ အမိန့်ကြော်ငြာစာအမှတ် - ၁၄၆/၂၀၁၉)

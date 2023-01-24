@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/tax-calculator/tax-calculator
+
+block variables
+  - const title = 'Property Tax Calculator'
+  - const description = 'Property Tax Calculator'
+
+block content
+  +header('relative')
+  .wrapper
+    +tax-calculator
