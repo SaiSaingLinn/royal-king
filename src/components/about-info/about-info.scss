@@ -1,6 +1,10 @@
 .about-info-wrapper {
   margin-top: 50px;
   margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .about-info-row {
     row-gap: 30px;
     .about-info-img {

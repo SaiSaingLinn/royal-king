@@ -54,7 +54,7 @@
       .detail-info__address {
         margin-bottom: 15px;
         display: flex;
-        align-items: center;
+        align-items: baseline;
         .address {
           display: flex;
           align-items: flex-start;
@@ -71,6 +71,7 @@
         .map-icon {
           img {
             width: 60px;
+            cursor: pointer;
           }
         }
       }

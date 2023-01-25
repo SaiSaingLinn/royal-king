@@ -13,3 +13,4 @@ import '@/components/detail-banner/detail-banner';
 import '@/components/detail-info/detail-info';
 import '@/components/test/test';
 import '@/components/contact-form/contact-form';
+import '@/components/search-tab/search-tab';

@@ -6,28 +6,25 @@
   width: 100%;
   z-index: 9;
   @media screen and (max-width: 991px) {
-    position: relative;
+    position: relative !important;
   }
   .header__wrapper {
     .navbar {
       .navbar-container {
         justify-content: flex-start;
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 1199px) {
           justify-content: space-between;
         }
         .navbar-brand {
-          margin-right: 100px;
+          margin-right: 10px;
           padding: 0;
-          @media screen and (max-width: 1199px) {
-            margin-right: 0;
+          @media screen and (min-width: 1400px) {
+            margin-right: 100px;
           }
           img {
-            width: 180px;
-            @media screen and (max-width: 991px) {
-              width: 150px;
-            }
-            @media screen and (max-width: 767px) {
-              width: 120px;
+            width: 100px;
+            @media screen and (min-width: 1400px) {
+              width: 180px;
             }
           }
         }
@@ -46,13 +43,17 @@
           flex-direction: column;
           row-gap: 30px;
           .contact-info {
-            display: flex;
+            display: none;
             justify-content: flex-end;
-            @media screen and (max-width: 991px) {
-              display: none;
+            @media screen and (min-width: 992px) {
+              display: flex;
             }
             .contact-info__item {
               margin-right: 10px;
+              font-size: 14px;
+              @media screen and (min-width: 1400px) {
+                margin-right: 16px;
+              }
               a {
                 text-decoration: none;
                 &:hover {
@@ -85,14 +86,23 @@
           #navbar-content {
             position: relative;
             border-top: 1px solid rgba($color: #FFF, $alpha: .1);
+            .collapsing {
+              transition-property: height, visibility;
+              transition-duration: .1s;
+            }
             .navbar-nav {
               .nav-item {
                 .nav-link {
                   color: $white;
-                  font-size: 18px;
+                  font-size: 16px;
                   text-transform: capitalize;
-                  padding-right: 12px;
-                  padding-left: 12px;
+                  padding-right: 10px;
+                  padding-left: 10px;
+                  @media screen and (min-width: 1400px) {
+                    font-size: 18px;
+                    padding-right: 12px;
+                    padding-left: 12px;
+                  }
                   &:hover {
                     color: $primary;
                   }
@@ -138,9 +148,13 @@
                   .mega-content {
                     padding: 20px;
                     .title {
-                      font-size: 20px;
                       font-weight: 600;
-                      margin-bottom: 25px;
+                      font-size: 18px;
+                      margin-bottom: 15px;
+                      @media screen and (min-width: 992px) {
+                        font-size: 20px;
+                        margin-bottom: 25px;
+                      }
                     }
                     .icon-row {
                       row-gap: 22px;
@@ -160,14 +174,21 @@
                         }
                       }
                       span {
-                        font-size: 18px;
+                        font-size: 16px;
                         text-align: center;
+                        @media screen and (min-width: 992px) {
+                          font-size: 18px;
+                        }
                       }
                     }
                     .card {
                       border: 0 none;
+                      display: none;
                       img {
                         width: 400px;
+                      }
+                      @media screen and (min-width: 992px) {
+                        display: block;
                       }
                     }
                   }
