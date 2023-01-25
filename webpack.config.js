@@ -40,7 +40,9 @@ const getOptimization = () => {
 };
 
 
-const getFileName = ext => IS_DEV ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+// const getFileName = ext => IS_DEV ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+
+const getFileName = ext => IS_DEV ? `[name].${ext}` : `[name].${ext}`;
 
 module.exports = {
   context: SRC,

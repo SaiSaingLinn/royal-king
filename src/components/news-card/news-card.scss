@@ -1,0 +1,27 @@
+.news-card-wrapper {
+  .news-card {
+    .news-card__image {
+      img {
+        width: 100%;
+      }
+    }
+    .news-card__content {
+      padding: 15px;
+      .news-card__content__date {
+        margin-bottom: 8px;
+        i {
+          margin-right: 5px;
+        }
+        span {
+          color: #A5A5A5;
+        }
+      }
+      .news-card__content__title {
+        h2 {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

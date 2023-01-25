@@ -1,8 +1,12 @@
 mixin news-card
-  .news-card-wrapper 
-    .news-card
-      .news-card__image
-        img(src="https://via.placeholder.com/530x280", alt="News Card Image")
-      .news-card__content
-        .news-card__content__date 16 Jan 2023
-        .news-card__content__title Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+  .col-12.col-md-6
+    a(href='news-detail.html').news-card-wrapper 
+      .news-card
+        .news-card__image
+          img(src=require('@/assets/images/static/news-update.png'), alt="News Card Image")
+        .news-card__content
+          .news-card__content__date
+            i.bi.bi-calendar-event 
+            span 16 Jan 2023
+          .news-card__content__title 
+            h2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor

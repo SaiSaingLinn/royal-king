@@ -1,0 +1,36 @@
+.news-updates-detail-wrapper {
+  background: #FFF;
+  padding: 50px 0;
+  @media screen and (max-width: 991px) {
+    padding: 30px 0;
+  }
+  .title {
+    font-size: 32px;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 20px;
+    @media screen and (max-width: 991px) {
+      font-size: 24px;
+    }
+  }
+  img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  p {
+    line-height: 27px;
+  }
+  .news-updates-detail__back {
+    margin-top: 24px;
+    .btn {
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: capitalize;
+      min-width: 200px;
+      padding: 10px;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

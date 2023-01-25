@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/page-not-found/page-not-found
+
+block variables
+  - const title = '404'
+  - const description = 'Page Not Found'
+
+block content
+  +header('relative')
+  .wrapper
+    +page-not-found

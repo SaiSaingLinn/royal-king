@@ -1,0 +1,30 @@
+.page-not-found-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .page-not-found__image {
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .desc {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 430px;
+    text-align: center;
+  }
+  .btn {
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/news-updates-detail/news-updates-detail
+
+block variables
+  - const title = 'News Detail'
+  - const description = 'News Detail'
+
+block content
+  +header('relative')
+  .wrapper
+    +news-updates-detail
