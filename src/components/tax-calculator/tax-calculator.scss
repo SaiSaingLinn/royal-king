@@ -28,8 +28,12 @@
     }
     .offer-check-wrap {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       margin-bottom: 25px;
+      column-gap: 50px;
+      @media screen and (max-width: 767px) {
+        column-gap: 15px;
+      }
     }
     .btn {
       text-transform: uppercase;
