@@ -1,3 +1,5 @@
+include ../price-range/price-range
+
 mixin search-tab
   .search-tab-wrapper
     .container
@@ -49,45 +51,7 @@ mixin search-tab
                             option(value='2') Two
                             option(value='3') Three
                       .col-6.col-sm-4.col-md-4.col-lg-2
-                        #sale-price-tab
-                          .input-group.icon-left.mb-3#price-sale.price-wrap
-                            label.input-group-text(for='price')
-                              img(src=require("@/assets/images/icons/dollar.svg"))
-                            select#price.form-select
-                              option(value='')
-                          .dropdown
-                            button.btn.btn-outline-secondary.dropdown-toggle.price-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
-                              span.price-toggle-label 
-                                img(src=require("@/assets/images/icons/dollar.svg"))
-                                span.label Price
-                              img.down-img(src=require("@/assets/images/icons/down.png"))
-
-                            ul.dropdown-menu.dropdown-menu-price
-                              ul#salePriceTab.nav.nav-tabs.nav-pills(role='tablist')
-                                li.nav-item.left(role='presentation')
-                                  button#mmk-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#mmk-tab-pane', type='button', role='tab', aria-controls='mmk-tab-pane', aria-selected='true') MMK
-                                li.nav-item.right(role='presentation')
-                                  button#usd-tab.nav-link(data-bs-toggle='tab', data-bs-target='#usd-tab-pane', type='button', role='tab', aria-controls='usd-tab-pane', aria-selected='false') USD
-                                
-                              #salePriceTabContent.tab-content
-                                #mmk-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='mmk-tab', tabindex='0')
-                                  .tab-content-title Price Range:
-                                  .tab-content-wrap 
-                                    button.btn.btn-outline-secondary(type='button', data-value='100Lakh - 300Lakh') 100Lakh - 300Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='301Lakh - 500Lakh') 301Lakh - 500Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='501Lakh - 700Lakh') 501Lakh - 700Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='701Lakh - 900Lakh') 701Lakh - 900Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='901Lakh - 1100Lakh') 901Lakh - 1100Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='1100Lakh & above') 1100Lakh & above
-                                #usd-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='usd-tab', tabindex='0')
-                                  .tab-content-title Price Range:
-                                  .tab-content-wrap 
-                                    button.btn.btn-outline-secondary(type='button', data-value='100$ - 300$') 100$ - 300$
-                                    button.btn.btn-outline-secondary(type='button', data-value='301$ - 500$') 301$ - 500$
-                                    button.btn.btn-outline-secondary(type='button', data-value='501$ - 700$') 501$ - 700$
-                                    button.btn.btn-outline-secondary(type='button', data-value='701$ - 900$') 701$ - 900$
-                                    button.btn.btn-outline-secondary(type='button', data-value='901$ - 1100$') 901$ - 1100$
-                                    button.btn.btn-outline-secondary(type='button', data-value='1100$ & above') 1100Lakh & above            
+                        +price-range
                       .col-6.col-sm-4.col-md-4.col-lg-2
                         .form-group
                           button#search-submit.btn.btn-primary.btn-block(type='submit') Search
@@ -130,45 +94,7 @@ mixin search-tab
                             option(value='2') Two
                             option(value='3') Three
                       .col-6.col-sm-4.col-md-4.col-lg-2
-                        #rent-price-tab
-                          .input-group.icon-left.mb-3#price-rent.price-wrap
-                            label.input-group-text(for='price')
-                              img(src=require("@/assets/images/icons/dollar.svg"))
-                            select#price.form-select
-                              option(value='')
-                          .dropdown
-                            button.btn.btn-outline-secondary.dropdown-toggle.price-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
-                              span.price-toggle-label 
-                                img(src=require("@/assets/images/icons/dollar.svg"))
-                                span.label Price
-                              img.down-img(src=require("@/assets/images/icons/down.png"))
-
-                            ul.dropdown-menu.dropdown-menu-price
-                              ul#rentPriceTab.nav.nav-tabs.nav-pills(role='tablist')
-                                li.nav-item.left(role='presentation')
-                                  button#mmk-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#mmk-tab-pane', type='button', role='tab', aria-controls='mmk-tab-pane', aria-selected='true') MMK
-                                li.nav-item.right(role='presentation')
-                                  button#usd-tab.nav-link(data-bs-toggle='tab', data-bs-target='#usd-tab-pane', type='button', role='tab', aria-controls='usd-tab-pane', aria-selected='false') USD
-                                
-                              #rentPriceTabContent.tab-content
-                                #mmk-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='mmk-tab', tabindex='0')
-                                  .tab-content-title Price Range:
-                                  .tab-content-wrap 
-                                    button.btn.btn-outline-secondary(type='button', data-value='100Lakh - 300Lakh') 100Lakh - 300Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='301Lakh - 500Lakh') 301Lakh - 500Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='501Lakh - 700Lakh') 501Lakh - 700Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='701Lakh - 900Lakh') 701Lakh - 900Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='901Lakh - 1100Lakh') 901Lakh - 1100Lakh
-                                    button.btn.btn-outline-secondary(type='button', data-value='1100Lakh & above') 1100Lakh & above
-                                #usd-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='usd-tab', tabindex='0')
-                                  .tab-content-title Price Range:
-                                  .tab-content-wrap 
-                                    button.btn.btn-outline-secondary(type='button', data-value='100$ - 300$') 100$ - 300$
-                                    button.btn.btn-outline-secondary(type='button', data-value='301$ - 500$') 301$ - 500$
-                                    button.btn.btn-outline-secondary(type='button', data-value='501$ - 700$') 501$ - 700$
-                                    button.btn.btn-outline-secondary(type='button', data-value='701$ - 900$') 701$ - 900$
-                                    button.btn.btn-outline-secondary(type='button', data-value='901$ - 1100$') 901$ - 1100$
-                                    button.btn.btn-outline-secondary(type='button', data-value='1100$ & above') 1100Lakh & above
+                        +price-range
                       .col-6.col-sm-4.col-md-4.col-lg-2
                         .form-group
                           button#search-submit.btn.btn-primary.btn-block(type='submit') Search

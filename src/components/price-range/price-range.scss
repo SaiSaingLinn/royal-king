@@ -1,0 +1,107 @@
+#price-range-wrapper {
+  #price-option-wrapper {
+    display: none;
+  }
+  .price-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-color: #ced4da;
+    color: #000;
+    overflow: hidden;
+    cursor: default;
+    &.show {
+      background: transparent;
+    }
+    &.active {
+      background: transparent;
+    }
+    .price-toggle-label {
+      display: flex;
+      text-align: left;
+      .label {
+        width: 110px;
+        overflow: hidden;
+      }
+      img {
+        width: 20px;
+        margin-right: 0.75rem;
+      }
+    }
+    img.down-img {
+      width: 14px;
+    }
+    &:hover, &:focus, &:active, &:focus-visible {
+      border-color: #ced4da;
+      background: transparent;
+      color: #000;
+      outline: none;
+      box-shadow: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .dropdown-menu-price {
+    padding: 20px 0;
+    .nav-tabs {
+      align-items: center;
+      justify-content: center;
+      .left {
+        .nav-link {
+          border-radius: 8px 0 0 8px;
+        }
+      }
+      .right {
+        .nav-link {
+          border-radius: 0 8px 8px 0;
+        }
+      }
+      .nav-item {
+        .nav-link {
+          padding: 8px 24px;
+          color: #000;
+          &.active {
+            background: #4781EE;
+            color: #FFF;
+          }
+        }
+      }
+    }
+    .tab-content {
+      .tab-pane {
+        .tab-content-title {
+          margin-bottom: 10px;
+          font-weight: 600;
+        }
+        .tab-content-wrap {
+          button {
+            border-color: #0000001F;
+            margin-bottom: 8px;
+            padding: 8px;
+            width: 150px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            &:hover {
+              background-color: #0000001F;
+              color: #000;
+            }
+            &:focus-visible {
+              outline: none;
+              background-color: transparent;
+              color: #000;
+              box-shadow: none;
+            }
+            &.active {
+              background-color: #0000001F;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

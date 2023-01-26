@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/no-result-found/no-result-found
+
+block variables
+  - const title = 'No Resut Found'
+  - const description = 'No Result Found'
+
+block content
+  +header('relative')
+  .wrapper
+    +no-result-found
