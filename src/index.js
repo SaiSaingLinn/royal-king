@@ -15,3 +15,4 @@ import '@/components/test/test';
 import '@/components/contact-form/contact-form';
 import '@/components/search-tab/search-tab';
 import '@/components/price-range/price-range';
+import '@/components/advance-search/advance-search';

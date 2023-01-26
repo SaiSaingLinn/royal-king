@@ -45,6 +45,12 @@
   }
   .dropdown-menu-price {
     padding: 20px 0;
+    .tab-content {
+      padding: 1rem;
+      padding-bottom: 0;
+      background: #FFF;
+      border-radius: 0 5px 5px 5px;
+    }
     .nav-tabs {
       align-items: center;
       justify-content: center;

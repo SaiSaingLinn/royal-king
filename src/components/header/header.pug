@@ -5,8 +5,9 @@ mixin header(type)
         .container.navbar-container
           a.navbar-brand(href='index.html')
             img.img-fluid(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
-          button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-content')
+          button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-content', aria-controls='navbar-content', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
+          
           .navbar-content-wrapper
             .contact-info
               .contact-info__item
@@ -19,7 +20,8 @@ mixin header(type)
                   span +1 234 567 890
               .contact-info__item
                 img(src=require("@/assets/images/icons/myanmar.png") alt='image')
-            #navbar-content.collapse.navbar-collapse
+            
+            #navbar-content.collapse
               ul.navbar-nav.mr-auto.mb-2.mb-lg-0
                 li.nav-item
                   a.nav-link.active(aria-current='page' href='index.html') Home

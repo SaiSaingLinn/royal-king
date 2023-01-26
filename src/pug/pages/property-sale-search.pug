@@ -1,0 +1,12 @@
+extends ../layouts/main
+include /components/header/header
+include /components/advance-search/advance-search
+
+block variables
+  - const title = 'Property Search'
+  - const description = 'Property Search'
+
+block content
+  +header('relative')
+  .wrapper
+    +advance-search
