@@ -1,6 +1,6 @@
 .header {
   background: rgba($color: #142535, $alpha: .9);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,6 +10,8 @@
   }
   .header__wrapper {
     .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
       .navbar-container {
         justify-content: flex-start;
         @media screen and (max-width: 1199px) {
@@ -21,10 +23,23 @@
           @media screen and (min-width: 1400px) {
             margin-right: 100px;
           }
-          img {
+          img.desktop {
             width: 100px;
+            transition: all .4s;
+            display: none;
+            @media screen and (min-width: 992px) {
+              display: block;
+            }
             @media screen and (min-width: 1400px) {
-              width: 180px;
+              width: 140px;
+              display: block;
+            }
+          }
+          img.mobile {
+            display: block;
+            width: 90px;
+            @media screen and (min-width: 992px) {
+              display: none;
             }
           }
         }
@@ -42,9 +57,11 @@
           display: flex;
           flex-direction: column;
           row-gap: 30px;
+          transition: all .4s;
           .contact-info {
             display: none;
             justify-content: flex-end;
+            transition: all .4s;
             @media screen and (min-width: 992px) {
               display: flex;
             }
@@ -86,11 +103,9 @@
           #navbar-content-item {
             position: relative;
             border-top: 1px solid rgba($color: #FFF, $alpha: .1);
-            .collapsing {
-              transition-property: height, visibility;
-              transition-duration: .1s;
-            }
+            transition: all .4s;
             .navbar-nav {
+              justify-content: space-between;
               .nav-item {
                 .nav-link {
                   color: $white;
@@ -98,6 +113,7 @@
                   text-transform: capitalize;
                   padding-right: 10px;
                   padding-left: 10px;
+                  padding-top: 13px;
                   @media screen and (min-width: 1400px) {
                     font-size: 18px;
                     padding-right: 12px;

@@ -1,12 +1,11 @@
 mixin header(type)
-  header.header(style = type === 'absolute' ? 'position: absolute' : 'position: relative')
+  header.header(style = type === 'home' ? 'background: rgba(20, 37, 53, 0.9)' : 'background: #142535')
     .header__wrapper.wrapper
       nav.navbar.navbar-expand-lg.navbar-dark
         .container.navbar-container
           a.navbar-brand(href='index.html')
-            img.img-fluid(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
-          //- button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-content')
-          //-   span.navbar-toggler-icon
+            img.img-fluid.desktop(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
+            img.img-fluid.mobile(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
           button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbar-content', aria-controls='navbar-content', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
           #navbar-content.collapse.navbar-collapse
