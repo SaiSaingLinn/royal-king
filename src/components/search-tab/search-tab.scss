@@ -17,9 +17,11 @@
     .nav.nav-search {
       column-gap: 5px;
       .nav-item {
+        border-radius: 4px 4px 0 0;
+        background: #FFF;
         .nav-link {
-          border-radius: 4px 4px 0 0;
           background: #EBEBEB;
+          border-radius: 4px 4px 0 0;
           color: #000;
           font-size: 18px;
           padding: 16px 24px;

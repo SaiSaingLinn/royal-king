@@ -1,44 +1,26 @@
 include ../price-range/price-range
+include ../property-type/property-type
+include ../select-state-township/select-state
+include ../select-state-township/select-township
 
-mixin search-form
+mixin search-form(type)
   .search-form-wrapper 
-    form.search-form
+    form.search-form(action='/?', method='get', autocomplete='off')
+      input(type='hidden', name='offer', value=type)
       .row
         .col-6.col-sm-4.col-md-4.col-lg-2
           .input-group.icon-left.mb-3
             span#search.input-group-text
               img(src=require("@/assets/images/icons/find.png"))
             input.form-control(type='text', placeholder='Search By Text', aria-label='Search By Text', aria-describedby='search')
-
         .col-6.col-sm-4.col-md-4.col-lg-2
-          .input-group.icon-left.mb-3
-            label.input-group-text(for='type')
-              img(src=require("@/assets/images/icons/property-type.svg"))
-            select#type.form-select
-              option(selected='') Property Type
-              option(value='1') One
-              option(value='2') Two
-              option(value='3') Three
+          +property-type
         .col-6.col-sm-4.col-md-4.col-lg-2
-          .input-group.icon-left.mb-3
-            label.input-group-text(for='state')
-              img(src=require("@/assets/images/icons/location.png"))
-            select#state.form-select
-              option(selected='') State/Division
-              option(value='1') One
-              option(value='2') Two
-              option(value='3') Three
+          +select-state(type)
         .col-6.col-sm-4.col-md-4.col-lg-2
-          .input-group.icon-left.mb-3
-            label.input-group-text(for='township')
-              img(src=require("@/assets/images/icons/location.png"))
-            select#township.form-select
-              option(selected='') Township
-              option(value='1') One
-              option(value='2') Two
-              option(value='3') Three
+          +select-township(type)
         .col-6.col-sm-4.col-md-4.col-lg-2
-          +price-range
+          +price-range(type)
         .col-6.col-sm-4.col-md-4.col-lg-2
           .form-group
             button#search-submit.btn.btn-primary.btn-block(type='submit') Search

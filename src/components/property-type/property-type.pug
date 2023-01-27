@@ -1,0 +1,47 @@
+mixin property-type
+  #property-type-wrapper
+    input(type='hidden', id='type', name='type', value='')
+    .dropdown
+      button.btn.btn-outline-secondary.dropdown-toggle.type-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+        span.type-toggle-label 
+          img(src=require("@/assets/images/icons/property-type.svg"))
+          span.label Property Type
+        img.down-img(src=require("@/assets/images/icons/down.png"))
+      ul.dropdown-menu.dropdown-menu-tab
+        #typeTabContent.tab-content
+          .row.icon-row.tab-content-wrap 
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='Condo')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/condo-logo.svg") alt='image')
+                span Condo  
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='Apartment')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/apartment-logo.svg") alt='image')
+                span Apartment
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='House')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/house-logo.svg") alt='image')
+                span House
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='Land')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/land-logo.svg") alt='image')
+                span Land
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='Hotel and Restaurant')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/hotel-logo.svg") alt='image')
+                span Hotel/ Restaurant
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='Shop and Office')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/shop-logo.svg") alt='image')
+                span Shop/ Office
+            .col-4.col-md-3
+              button.icon-wrapper.btn.btn-outline-secondary(type='button', data-value='Industrial Zone')
+                .icon
+                  img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
+                span Industrial Zone

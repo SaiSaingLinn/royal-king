@@ -7,5 +7,14 @@
         min-width: 140px;
       }
     }
+    .input-group-text {
+      border-right: 0 none;
+    }
+    .form-select {
+      &:disabled {
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
   }
 }

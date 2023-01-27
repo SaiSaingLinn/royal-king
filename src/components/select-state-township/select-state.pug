@@ -1,0 +1,9 @@
+mixin select-state(type)
+  .input-group.icon-left.mb-3
+    label.input-group-text(for=`division`)
+      img(src=require("@/assets/images/icons/location.png"))
+    select.form-select(name=`division`, id=`${type}-division`)
+      option(value='') State/Division
+      option(value='yangon') Yangon
+      option(value='mandalay') Mandalay
+      option(value='naypyitaw') Naypyitaw

@@ -17,3 +17,5 @@ import '@/components/search-tab/search-tab';
 import '@/components/price-range/price-range';
 import '@/components/advance-search/advance-search';
 import '@/components/header/header';
+import '@/components/property-type/property-type';
+import '@/components/select-state-township/select-state-township';

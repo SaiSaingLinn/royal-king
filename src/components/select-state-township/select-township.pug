@@ -1,0 +1,15 @@
+mixin select-township(type)
+  .input-group.icon-left.mb-3
+    label.input-group-text(for=`township`)
+      img(src=require("@/assets/images/icons/location.png"))
+    select.form-select(name=`township`, id=`${type}-township`)
+      option(value='') Township
+      option.yangon(value='sanchaung') Sanchaung
+      option.yangon(value='kamaryut') Kamaryut
+      option.yangon(value='hlaing') Hlaing
+      option.mandalay(value='chanmyatharzi') Chan Mya Tharzi
+      option.mandalay(value='chanayetharsan') Chan Aye Tharsan
+      option.mandalay(value='amarapura') Amarapura 
+      option.naypyitaw(value='pyinmana') Pyinmana
+      option.naypyitaw(value='zeyarthiri') Zeyar Thiri
+      option.naypyitaw(value='zabuthiri') Zabu Thiri
