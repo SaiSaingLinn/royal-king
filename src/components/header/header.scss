@@ -1,3 +1,14 @@
+.header-wrapper {
+  &.home {
+    height: auto;
+  }
+  &.not-home {
+    height: 118px;
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
+  }
+}
 .header {
   background: rgba($color: #142535, $alpha: .9);
   position: fixed;

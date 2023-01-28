@@ -10,28 +10,29 @@ mixin price-range(type)
         img.down-img(src=require("@/assets/images/icons/down.png"))
 
       ul.dropdown-menu.dropdown-menu-tab
-        ul#priceTab.nav.nav-tabs.nav-pills(role='tablist')
-          li.nav-item.left(role='presentation')
-            button.nav-link.active(data-bs-toggle='tab', data-bs-target=`#${type}-mmk-tab-pane`, type='button', role='tab', aria-controls=`${type}-mmk-tab-pane`, aria-selected='true', id=`#${type}-mmk-tab`) MMK
-          li.nav-item.right(role='presentation')
-            button.nav-link(data-bs-toggle='tab', data-bs-target=`#${type}-usd-tab-pane`, type='button', role='tab', aria-controls=`${type}-usd-tab-pane`, aria-selected='false', id=`#${type}-usd-tab`) USD
+        if type == 'rent'
+          ul#priceTab.nav.nav-tabs.nav-pills(role='tablist')
+            li.nav-item(role='presentation')
+              button.nav-link.active(data-bs-toggle='tab', data-bs-target=`#${type}-mmk-tab-pane`, type='button', role='tab', aria-controls=`${type}-mmk-tab-pane`, aria-selected='true', id=`#${type}-mmk-tab`) MMK
+            li.nav-item(role='presentation')
+              button.nav-link(data-bs-toggle='tab', data-bs-target=`#${type}-usd-tab-pane`, type='button', role='tab', aria-controls=`${type}-usd-tab-pane`, aria-selected='false', id=`#${type}-usd-tab`) USD
           
         #priceTabContent.tab-content
           .tab-pane.fade.show.active(role='tabpanel', aria-labelledby=`${type}-mmk-tab`, tabindex='0', id=`${type}-mmk-tab-pane`)
             .tab-content-title Price Range:
             .tab-content-wrap 
-              button.btn.btn-outline-secondary(type='button', data-value='100Lakh - 300Lakh', data-unit='mmk') 100Lakh - 300Lakh
-              button.btn.btn-outline-secondary(type='button', data-value='301Lakh - 500Lakh', data-unit='mmk') 301Lakh - 500Lakh
-              button.btn.btn-outline-secondary(type='button', data-value='501Lakh - 700Lakh', data-unit='mmk') 501Lakh - 700Lakh
-              button.btn.btn-outline-secondary(type='button', data-value='701Lakh - 900Lakh', data-unit='mmk') 701Lakh - 900Lakh
-              button.btn.btn-outline-secondary(type='button', data-value='901Lakh - 1100Lakh', data-unit='mmk') 901Lakh - 1100Lakh
-              button.btn.btn-outline-secondary(type='button', data-value='1100Lakh & above', data-unit='mmk') 1100Lakh & above
+              button.btn.btn-outline-secondary(type='button', data-value='100Lakh-300Lakh', data-unit='mmk') 100Lakh - 300Lakh
+              button.btn.btn-outline-secondary(type='button', data-value='301Lakh-500Lakh', data-unit='mmk') 301Lakh - 500Lakh
+              button.btn.btn-outline-secondary(type='button', data-value='501Lakh-700Lakh', data-unit='mmk') 501Lakh - 700Lakh
+              button.btn.btn-outline-secondary(type='button', data-value='701Lakh-900Lakh', data-unit='mmk') 701Lakh - 900Lakh
+              button.btn.btn-outline-secondary(type='button', data-value='901Lakh-1100Lakh', data-unit='mmk') 901Lakh - 1100Lakh
+              button.btn.btn-outline-secondary(type='button', data-value='1100Lakh-above', data-unit='mmk') 1100Lakh & above
           .tab-pane.fade(role='tabpanel', aria-labelledby=`${type}-usd-tab`, tabindex='0', id=`${type}-usd-tab-pane`)
             .tab-content-title Price Range:
             .tab-content-wrap 
-              button.btn.btn-outline-secondary(type='button', data-value='100$ - 300$', data-unit='usd') 100$ - 300$
-              button.btn.btn-outline-secondary(type='button', data-value='301$ - 500$', data-unit='usd') 301$ - 500$
-              button.btn.btn-outline-secondary(type='button', data-value='501$ - 700$', data-unit='usd') 501$ - 700$
-              button.btn.btn-outline-secondary(type='button', data-value='701$ - 900$', data-unit='usd') 701$ - 900$
-              button.btn.btn-outline-secondary(type='button', data-value='901$ - 1100$', data-unit='usd') 901$ - 1100$
-              button.btn.btn-outline-secondary(type='button', data-value='1100$ & above', data-unit='usd') 1100Lakh & above
+              button.btn.btn-outline-secondary(type='button', data-value='100$-300$', data-unit='usd') 100$ - 300$
+              button.btn.btn-outline-secondary(type='button', data-value='301$-500$', data-unit='usd') 301$ - 500$
+              button.btn.btn-outline-secondary(type='button', data-value='501$-700$', data-unit='usd') 501$ - 700$
+              button.btn.btn-outline-secondary(type='button', data-value='701$-900$', data-unit='usd') 701$ - 900$
+              button.btn.btn-outline-secondary(type='button', data-value='901$-1100$', data-unit='usd') 901$ - 1100$
+              button.btn.btn-outline-secondary(type='button', data-value='1100$-above', data-unit='usd') 1100Lakh & above

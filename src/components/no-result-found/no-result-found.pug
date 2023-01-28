@@ -1,7 +1,10 @@
 mixin no-result-found
-  .no-result-found-wrapper 
-    .no-result-found__image
-      img(src=require('@/assets/images/icons/no-result.svg'), alt="No Result")
-    h1.title Search No Result
-    p.desc We're sorry. We couldn't find anything to match that request, please try another option...
-    //- a(href='index.html').btn.btn-primary Go Home
+  .container 
+    .row 
+      .col-12
+        .no-result-found-wrapper 
+          .no-result-found__image
+            img(src=require('@/assets/images/icons/no-result.svg'), alt="No Result")
+          h1.title Search No Result
+          p.desc We're sorry. We couldn't find anything to match that request, please try another option...
+          //- a(href='index.html').btn.btn-primary Go Home

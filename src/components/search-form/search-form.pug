@@ -12,7 +12,7 @@ mixin search-form(type)
           .input-group.icon-left.mb-3
             span#search.input-group-text
               img(src=require("@/assets/images/icons/find.png"))
-            input.form-control(type='text', placeholder='Search By Text', aria-label='Search By Text', aria-describedby='search')
+            input.form-control(name='search', type='text', placeholder='Search By Text', aria-label='Search By Text', aria-describedby='search')
         .col-6.col-sm-4.col-md-4.col-lg-2
           +property-type
         .col-6.col-sm-4.col-md-4.col-lg-2

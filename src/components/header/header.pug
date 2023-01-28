@@ -1,139 +1,140 @@
 mixin header(type)
-  header.header(style = type === 'home' ? 'background: rgba(20, 37, 53, 0.9)' : 'background: #142535')
-    .header__wrapper.wrapper
-      nav.navbar.navbar-expand-lg.navbar-dark
-        .container.navbar-container
-          a.navbar-brand(href='index.html')
-            img.img-fluid.desktop(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
-            img.img-fluid.mobile(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
-          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbar-content', aria-controls='navbar-content', aria-expanded='false', aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-          #navbar-content.collapse.navbar-collapse
-            .navbar-content-wrapper
-              .contact-info
-                .contact-info__item
-                  a(href='mailto:info@xxxxx.com')
-                    i.bi.bi-envelope
-                    span info@xxxxx.com
-                .contact-info__item
-                  a(href='tel:+1234567890')
-                    i.bi.bi-phone
-                    span +1 234 567 890
-                .contact-info__item
-                  img(src=require("@/assets/images/icons/myanmar.png") alt='image')
-              #navbar-content-item
-                ul.navbar-nav.mr-auto.mb-2.mb-lg-0
-                  li.nav-item
-                    a.nav-link.active(aria-current='page' href='index.html') Home
-                  li.nav-item.dropdown.dropdown-mega.position-static
-                    a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') For Sale
-                    .dropdown-menu.shadow
-                      .mega-content
-                        .row
-                          .col-12.col-lg-8
-                            h5.title Property For Sale
-                            .row.icon-row
-                              .col-4.col-md-3
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/condo-logo.svg") alt='image')
-                                  span Condo
-                              .col-4.col-md-3
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/apartment-logo.svg") alt='image')
-                                  span Apartment
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/house-logo.svg") alt='image')
-                                  span House
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/land-logo.svg") alt='image')
-                                  span Land
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/hotel-logo.svg") alt='image')
-                                  span Hotel/ Restaurant
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/shop-logo.svg") alt='image')
-                                  span Shop/Office
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
-                                  span Industrial Zone
-                          .col-12.col-lg-4
-                            .card
-                              img.img-fluid(src=require("@/assets/images/static/family.png") alt='image')
-                  li.nav-item.dropdown.dropdown-mega.position-static
-                    a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') For Rent
-                    .dropdown-menu.shadow
-                      .mega-content
-                        .row
-                          .col-12.col-sm-4.col-md-8
-                            h5.title Property For Rent
-                            .row.icon-row
-                              .col-4.col-md-3
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/condo-logo.svg") alt='image')
-                                  span Condo
-                              .col-4.col-md-3
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/apartment-logo.svg") alt='image')
-                                  span Apartment
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/house-logo.svg") alt='image')
-                                  span House
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/land-logo.svg") alt='image')
-                                  span Land
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/hotel-logo.svg") alt='image')
-                                  span Hotel/ Restaurant
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/shop-logo.svg") alt='image')
-                                  span Shop/Office
-                              .col-4.col-md-3 
-                                a.icon-wrapper(href='#') 
-                                  .icon
-                                    img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
-                                  span Industrial Zone
-                          .col-12.col-sm-4.col-md-4
-                            .card
-                              img.img-fluid(src=require("@/assets/images/static/family.png") alt='image')
-                  li.nav-item
-                    a.nav-link(href='#') Bank Installment
-                  li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Contact For Owner
-                    ul.dropdown-menu.shadow
-                      li
-                        a.dropdown-item(href='contact-sale.html') For Sell
-                      li
-                        a.dropdown-item(href='contact-rent.html') For Rent
-                  li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Services
-                    ul.dropdown-menu.shadow
-                      li
-                        a.dropdown-item(href='#') Loan
-                      li
-                        a.dropdown-item(href='#') Mortgage
-                  li.nav-item
-                    a.nav-link(href='#') News & Update
-                  li.nav-item
-                    a.nav-link(href='about.html') About Us
+  .header-wrapper(class = `${type === 'home' ? 'home' : 'not-home'}`)
+    header.header(style = type === 'home' ? 'background: rgba(20, 37, 53, 0.9)' : 'background: #142535')
+      .header__wrapper.wrapper
+        nav.navbar.navbar-expand-lg.navbar-dark
+          .container.navbar-container
+            a.navbar-brand(href='index.html')
+              img.img-fluid.desktop(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
+              img.img-fluid.mobile(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbar-content', aria-controls='navbar-content', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbar-content.collapse.navbar-collapse
+              .navbar-content-wrapper
+                .contact-info
+                  .contact-info__item
+                    a(href='mailto:info@xxxxx.com')
+                      i.bi.bi-envelope
+                      span info@xxxxx.com
+                  .contact-info__item
+                    a(href='tel:+1234567890')
+                      i.bi.bi-phone
+                      span +1 234 567 890
+                  .contact-info__item
+                    img(src=require("@/assets/images/icons/myanmar.png") alt='image')
+                #navbar-content-item
+                  ul.navbar-nav.mr-auto.mb-2.mb-lg-0
+                    li.nav-item
+                      a.nav-link.active(aria-current='page' href='index.html') Home
+                    li.nav-item.dropdown.dropdown-mega.position-static
+                      a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') For Sale
+                      .dropdown-menu.shadow
+                        .mega-content
+                          .row
+                            .col-12.col-lg-8
+                              h5.title Property For Sale
+                              .row.icon-row
+                                .col-4.col-md-3
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/condo-logo.svg") alt='image')
+                                    span Condo
+                                .col-4.col-md-3
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/apartment-logo.svg") alt='image')
+                                    span Apartment
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/house-logo.svg") alt='image')
+                                    span House
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/land-logo.svg") alt='image')
+                                    span Land
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/hotel-logo.svg") alt='image')
+                                    span Hotel/ Restaurant
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/shop-logo.svg") alt='image')
+                                    span Shop/Office
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
+                                    span Industrial Zone
+                            .col-12.col-lg-4
+                              .card
+                                img.img-fluid(src=require("@/assets/images/static/family.png") alt='image')
+                    li.nav-item.dropdown.dropdown-mega.position-static
+                      a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') For Rent
+                      .dropdown-menu.shadow
+                        .mega-content
+                          .row
+                            .col-12.col-sm-4.col-md-8
+                              h5.title Property For Rent
+                              .row.icon-row
+                                .col-4.col-md-3
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/condo-logo.svg") alt='image')
+                                    span Condo
+                                .col-4.col-md-3
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/apartment-logo.svg") alt='image')
+                                    span Apartment
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/house-logo.svg") alt='image')
+                                    span House
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/land-logo.svg") alt='image')
+                                    span Land
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/hotel-logo.svg") alt='image')
+                                    span Hotel/ Restaurant
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/shop-logo.svg") alt='image')
+                                    span Shop/Office
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
+                                    span Industrial Zone
+                            .col-12.col-sm-4.col-md-4
+                              .card
+                                img.img-fluid(src=require("@/assets/images/static/family.png") alt='image')
+                    li.nav-item
+                      a.nav-link(href='#') Bank Installment
+                    li.nav-item.dropdown
+                      a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Contact For Owner
+                      ul.dropdown-menu.shadow
+                        li
+                          a.dropdown-item(href='contact-sale.html') For Sell
+                        li
+                          a.dropdown-item(href='contact-rent.html') For Rent
+                    li.nav-item.dropdown
+                      a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Services
+                      ul.dropdown-menu.shadow
+                        li
+                          a.dropdown-item(href='#') Loan
+                        li
+                          a.dropdown-item(href='#') Mortgage
+                    li.nav-item
+                      a.nav-link(href='news.html') News & Update
+                    li.nav-item
+                      a.nav-link(href='about.html') About Us

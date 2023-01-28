@@ -44,7 +44,7 @@
     }
   }
   .dropdown-menu-tab {
-    padding: 20px 0;
+    padding: 0 0 .5rem 0;
     .tab-content {
       padding: 1rem;
       padding-bottom: 0;
@@ -54,16 +54,17 @@
     .nav-tabs {
       align-items: center;
       justify-content: center;
-      .left {
-        .nav-link {
-          border-radius: 8px 0 0 8px;
-        }
-      }
-      .right {
-        .nav-link {
-          border-radius: 0 8px 8px 0;
-        }
-      }
+      padding-top: 1rem;
+      // .left {
+      //   .nav-link {
+      //     border-radius: 8px 0 0 8px;
+      //   }
+      // }
+      // .right {
+      //   .nav-link {
+      //     border-radius: 0 8px 8px 0;
+      //   }
+      // }
       .nav-item {
         .nav-link {
           padding: 8px 24px;

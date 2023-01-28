@@ -8,7 +8,7 @@ mixin contact-form(type)
     .container
       .row
         .col-12
-          form(action="#" method="post")
+          form
             .info-form.form-wrap
               h3.sub-title Property Information 
               .row 
@@ -17,13 +17,13 @@ mixin contact-form(type)
                     .col-12.col-md-6 
                       .mb-3
                         label.form-label.required(for='propertyType') Property Type
-                        select#propertyType.form-select(aria-label='Property Type')
-                          option(selected='') Property Type
+                        select#propertyType.form-select(aria-label='Property Type', required)
+                          option(value='') Property Type
                           option(value='1') Condon
                           option(value='2') House
                       .mb-3
                         label.form-label.required(for='price') Price
-                        input#price.form-control(type='text')
+                        input#price.form-control(type='text', required)
                       if type === 'rent'
                         .check-wrap.mb-3
                           .form-check
@@ -40,15 +40,15 @@ mixin contact-form(type)
                       if type === 'sale'
                         .mb-3
                           label.form-label.required(for='address') Property Address
-                          textarea#address.form-control(rows='2')
+                          textarea#address.form-control(rows='2', required)
                       .mb-3
                         label.form-label.required(for='description') Property Description
-                        textarea#description.form-control(rows='3')
+                        textarea#description.form-control(rows='3', required)
                     .col-12.col-md-6 
                       if type === 'rent'
                         .mb-3
                           label.form-label.required(for='address') Property Address
-                          textarea#address.form-control(rows='2')
+                          textarea#address.form-control(rows='2', required)
                       .mb-3
                         label.form-label(for='map') Map
                         p Map will go here
@@ -67,10 +67,10 @@ mixin contact-form(type)
                     .col-12.col-md-6 
                       .mb-3
                         label.form-label.required(for='name') Name
-                        input#name.form-control(type='text')
+                        input#name.form-control(type='text', required)
                       .mb-3
                         label.form-label.required(for='phone') Phone
-                        input#phone.form-control(type='text')
+                        input#phone.form-control(type='text', required)
                     .col-12.col-md-6 
                       .mb-3
                         label.form-label(for='email') Email
