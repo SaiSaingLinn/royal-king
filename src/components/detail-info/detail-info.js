@@ -4,7 +4,7 @@ if (mapIcon) {
   mapIcon.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
-      top: document.querySelector('.detail-info-wrapper #map').offsetTop - 30,
+      top: document.querySelector('.detail-info-wrapper #map').offsetTop - 130,
       behavior: 'smooth'
     });
   });

@@ -115,14 +115,12 @@
               row-gap: 15px;
             }
             .photo-nav-row {
-              row-gap: 30px;
               max-height: 485px;
               overflow: auto;
               @media screen and (max-width: 991px) {
                 max-height: 250px;
               }
               @media screen and (max-width: 767px) {
-                row-gap: 15px;
                 max-height: 200px;
               }
               .photo-tour-item {

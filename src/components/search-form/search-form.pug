@@ -7,20 +7,20 @@ mixin search-form(type)
   .search-form-wrapper 
     form.search-form(action='/?', method='get', autocomplete='off')
       input(type='hidden', name='offer', value=type)
-      .row
-        .col-6.col-sm-4.col-md-4.col-lg-2
-          .input-group.icon-left.mb-3
+      .search-row
+        .search-col
+          .input-group.icon-left
             span#search.input-group-text
               img(src=require("@/assets/images/icons/find.png"))
             input.form-control(name='search', type='text', placeholder='Search By Text', aria-label='Search By Text', aria-describedby='search')
-        .col-6.col-sm-4.col-md-4.col-lg-2
+        .search-col
           +property-type
-        .col-6.col-sm-4.col-md-4.col-lg-2
+        .search-col
           +select-state(type)
-        .col-6.col-sm-4.col-md-4.col-lg-2
+        .search-col
           +select-township(type)
-        .col-6.col-sm-4.col-md-4.col-lg-2
+        .search-col
           +price-range(type)
-        .col-6.col-sm-4.col-md-4.col-lg-2
+        .search-col
           .form-group
             button#search-submit.btn.btn-primary.btn-block(type='submit') Search

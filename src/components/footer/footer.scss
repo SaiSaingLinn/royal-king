@@ -1,5 +1,7 @@
 footer {
-  background: url('@/assets/images/static/footer-bg.svg') no-repeat center/cover;
+  background: url('@/assets/images/static/footer-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #CCC;
   .top-footer {
     padding-bottom: 30px;
@@ -8,7 +10,7 @@ footer {
     }
     .footer-logo {
       background: #223241;
-      border-radius: 0 0 140px 140px;
+      border-radius: 0 0 100px 100px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -16,14 +18,16 @@ footer {
       padding: 50px 0;
       margin-right: 20px;
       margin-left: 20px;
-      @media screen and (max-width: 1199px) {
-        margin-right: 0;
-        margin-left: 0;
+      @include media-breakpoint-up(xxl) {
+        border-radius: 0 0 140px 140px;
       }
       .logo {
         margin-bottom: 22px;
         img {
-        width: 250px; 
+          width: 200px; 
+          @include media-breakpoint-up(xxl) {
+            width: 250px;
+          }
         }
       }
       .social-icons {
@@ -39,9 +43,12 @@ footer {
     .footer-info {
       padding-top: 50px;
       .title {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 20px;
         color: #FFF;
+        @include media-breakpoint-up(xxl) {
+          font-size: 24px;
+        }
       }
       p {
         color: #CCCCCC;
@@ -68,11 +75,17 @@ footer {
           span {
             a {
               color: #CCC;
+              text-decoration: underline;
             }
           }
           span.phone {
             a {
-              margin-right: 15px;
+              margin-right: 0;
+              display: block;
+              @include media-breakpoint-up(xxl) {
+                display: inline;
+                margin-right: 15px;
+              }
             }
           }
         }
@@ -80,9 +93,12 @@ footer {
     }
   }
   .bottom-footer {
-    padding: 25px 0;
     font-size: 16px;
     color: #CCCCCC;
+    .bottom-footer-wrapper {
+      border-top: 1px solid #777777;
+      padding: 25px 0;
+    }
     .bottom-footer-row {
       row-gap: 20px;
     }

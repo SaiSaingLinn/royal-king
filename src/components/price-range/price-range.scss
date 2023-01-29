@@ -55,20 +55,20 @@
       align-items: center;
       justify-content: center;
       padding-top: 1rem;
-      // .left {
-      //   .nav-link {
-      //     border-radius: 8px 0 0 8px;
-      //   }
-      // }
-      // .right {
-      //   .nav-link {
-      //     border-radius: 0 8px 8px 0;
-      //   }
-      // }
+      border: 0 none;
       .nav-item {
+        border: 1px solid #0000001F;
+        overflow: hidden;
+        &:first-child {
+          border-radius: .375rem 0 0 .375rem;
+        }
+        &:last-child {
+          border-radius: 0 .375rem .375rem 0;
+        }
         .nav-link {
           padding: 8px 24px;
           color: #000;
+          border-radius: 0;
           &.active {
             background: #4781EE;
             color: #FFF;

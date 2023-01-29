@@ -1,5 +1,30 @@
 .search-form-wrapper {
   .search-form {
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      row-gap: 10px;
+      column-gap: 10px;
+      @media screen and (min-width: 1400px) {
+        flex-wrap: nowrap;
+      }
+      .search-col {
+        width: 100%;
+        @include media-breakpoint-up(sm) {
+          width: 48%;
+        }
+        @include media-breakpoint-up(md) {
+          width: 32%;
+        }
+        @include media-breakpoint-up(lg) {
+          width: 23%;
+        }
+        @include media-breakpoint-up(xl) {
+          width: 100%;
+        }
+      }
+    }
     .form-group {
       #search-submit {
         text-transform: uppercase;

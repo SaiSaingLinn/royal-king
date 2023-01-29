@@ -18,7 +18,7 @@ mixin detail-banner
         i.bi.bi-camera-video-fill
         | Video Tour
       button.btn.btn-primary.custom-btn(type='button', data-bs-toggle='modal', data-bs-target='#photoTour')
-        i.bi.bi-camera-eye-fill
+        i.bi.bi-eye-fill
         | See All Photos
       #videoTour.modal.fade(tabindex='-1', aria-labelledby='videoTourLabel', aria-hidden='true')
         .modal-dialog.modal-dialog-centered.container
@@ -37,7 +37,7 @@ mixin detail-banner
             .modal-body
               .row.photo-tour-row
                 .col-12.col-md-4
-                  .row.photo-nav-row
+                  .row.photo-nav-row.g-3
                     .col-4.col-md-6
                       .photo-tour-item#photo-nav
                         img(src=require('@/assets/images/static/detail-banner1.jpg') alt='image')
