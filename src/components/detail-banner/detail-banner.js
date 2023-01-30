@@ -32,13 +32,18 @@ $('.detail-banner-slider').slick({
   ]
 });
 
-// click on #photo-nav img to change the main photo #photo-content img 
-// and add active in photoNav 
-// and add first photoNav active
-$('#photo-nav img').on('click', function() {
-  $('#photo-content img').attr('src', $(this).attr('src'));
-  $('#photo-nav img').removeClass('active');
-  $(this).addClass('active');
-  $('#photo-nav img').first().addClass('active');
+// loop through each #photo-nav img and add active class base on #photo-content img src
+$('#photo-nav img').each(function () {
+  if ($(this).attr('src') == $('#photo-content img').attr('src')) {
+    $(this).addClass('active');
+  }
+  // click on #photo-nav img to change the photo #photo-content img 
+  $(this).on('click', function () {
+    $('#photo-content img').attr('src', $(this).attr('src'));
+    $('#photo-nav img').removeClass('active');
+    $(this).addClass('active');
+  });
 });
+
+
 
