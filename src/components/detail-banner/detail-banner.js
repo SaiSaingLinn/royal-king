@@ -32,15 +32,19 @@ $('.detail-banner-slider').slick({
   ]
 });
 
-// click on #photo-nav img to change the main photo #photo-content img
+// click on #photo-nav img to change the main photo #photo-content img and add active in photoNav and add first photoNav active
 let photoNav = document.querySelectorAll('#photo-nav img');
 let photoContent = document.querySelector('#photo-content img');
-photoNav.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    photoNav.forEach((item, index) => {
-      item.classList.remove('active');
+if (photoNav) {
+  photoNav.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      photoContent.src = item.src;
+      photoNav.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      item.classList.add('active');
     });
-    item.classList.add('active');
-    photoContent.src = item.src;
   });
-});
+  photoNav[0].classList.add('active');
+}

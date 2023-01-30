@@ -1,4 +1,5 @@
 include /components/footer/footer
+include /components/loading/loading
 
 block variables
 
@@ -7,10 +8,33 @@ html(lang='en')
   head
     title #{title}
     meta(name="description", content=description)
+    meta(property='og:url', content=ogUrl)
+    meta(property='og:title', content=ogTitle)
+    meta(property='og:description', content=ogDescription)
+    meta(property='og:image', content=ogImage)
+    
+    script.
+      document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+          document.querySelector(
+          "body").style.visibility = "hidden";
+          document.querySelector(
+          "#loader").style.visibility = "visible";
+        } else {
+          document.querySelector(
+          "#loader").style.display = "none";
+          document.querySelector(
+          "body").style.visibility = "visible";
+          document.querySelector(
+          "body").style.overflow = "auto";
+        }
+      };
     include ../utils/metas
     include ../utils/links
 
-  body
+
+  body(style='visibility: hidden; overflow: hidden;')
+    +loading
     .page-wrapper
       block content
       +footer

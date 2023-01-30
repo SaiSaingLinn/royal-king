@@ -96,10 +96,17 @@
           align-items: center;
           img {
             margin-right: 5px;
+            width: 14px;
+            @include media-breakpoint-up(xxl) {
+              width: 16px;
+            }
           }
           .card-footer-text {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 500;
+            @include media-breakpoint-up(xxl) {
+              font-size: 18px;
+            }
           }
         }
       }
