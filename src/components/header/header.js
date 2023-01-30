@@ -12,7 +12,7 @@ $(window).on('scroll', function () {
         });
         $('header #navbar-content #navbar-content-item').css('border-color', 'transparent');
     } else {
-        $('header .navbar-brand img.desktop').css('width', '140px');
+        $('header .navbar-brand img.desktop').css('width', '130px');
         $('header #navbar-content .navbar-content-wrapper').css('row-gap', '30px');
         $('header #navbar-content .contact-info').css({
             'visibility': 'visible',
