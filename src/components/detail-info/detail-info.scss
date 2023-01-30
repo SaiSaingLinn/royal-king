@@ -43,6 +43,9 @@
             &.sale {
               background: #A87619;
             }
+            &.sold {
+              background: #C45C54;
+            }
             @include media-breakpoint-up(xxl) {
               font-size: 14px;
               padding: 5px 10px;
@@ -104,7 +107,7 @@
           .price {
             font-size: 32px;
             font-family: 'DM Serif Display', serif;
-            margin-right: 15px;
+            margin-right: 10px;
             color: #1B40E8;
             @media screen and (max-width: 767px) {
               font-size: 24px;
@@ -117,6 +120,10 @@
             border-radius: 6px;
             border: 1px solid #2FB184;
             margin-bottom: 0;
+          }
+          .price-label {
+            font-size: 18px;
+            font-weight: 500;
           }
         }
         .social {

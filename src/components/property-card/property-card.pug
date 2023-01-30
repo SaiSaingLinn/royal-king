@@ -1,5 +1,5 @@
 mixin property-card(type, bank, month)
-  a(href="detail.html").card-wrapper 
+  a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
     .card 
       .card-image 
         img(src=require('@/assets/images/static/card.jpg') alt='image')
@@ -7,9 +7,12 @@ mixin property-card(type, bank, month)
           if type === 'rent'
             p.card-label-text.rent 
               | For Rent
-          else
+          else if type === 'sale'
             p.card-label-text.sale 
               | For Sale
+          else if type === 'sold'
+            p.card-label-text.sold 
+              | Sold Out
       .card-content 
         .price-wrap
           p.card-price 800 Lakhs

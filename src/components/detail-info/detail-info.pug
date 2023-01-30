@@ -1,6 +1,6 @@
 include ../property-card/property-card
 
-mixin detail-info
+mixin detail-info(type)
   .detail-info-wrapper 
     .container 
       .row 
@@ -10,8 +10,15 @@ mixin detail-info
               .detail-info__title 
                 .title 
                   h1 3 Bedroom Apartment for Sale in 
-                  span.label.sale
-                    | For Sale
+                  if type === 'rent'
+                    span.label.rent
+                      | For Rent
+                  else if type === 'sale'
+                    span.label.sale
+                      | For Sale
+                  else
+                    span.label.sold
+                      | Sold Out
                 .date 
                   p
                     | Posted Date: 14 Dec 2022
@@ -26,7 +33,12 @@ mixin detail-info
                 .price-wrap
                   p.price 
                     | 200 Lakhs
-                  p.card-bank Bank Installment
+                  if type === 'rent'
+                    p.price-label 
+                      | / month
+                  else
+                    p.card-bank 
+                      | Bank Installment
                 .social 
                   p.view-count 
                     | View count : 100000
@@ -261,7 +273,7 @@ mixin detail-info
                         .mb-3
                           label.form-label(for='rentPrice') Property Sale Price
                           .input-group.icon-right
-                            input.form-control#rentPrice(type='text', placeholder="Enter Price", aria-label="rentPrice", aria-describedby='rentPriceAddon')
+                            input.form-control#rentPrice(type='number', placeholder="Enter Price", aria-label="rentPrice", aria-describedby='rentPriceAddon')
                             span#rentPriceAddon.input-group-text Lakhs
 
                       #nav-rent.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')

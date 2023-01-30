@@ -118,8 +118,52 @@ mixin header(type)
                             .col-12.col-sm-4.col-md-4
                               .card
                                 img.img-fluid(src=require("@/assets/images/static/family.png") alt='image')
-                    li.nav-item
-                      a.nav-link(href='#') Bank Installment
+                    li.nav-item.dropdown.dropdown-mega.position-static
+                      a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Bank Installment
+                      .dropdown-menu.shadow
+                        .mega-content
+                          .row
+                            .col-12.col-sm-4.col-md-8
+                              h5.title Property available on bank installment
+                              .row.icon-row
+                                .col-4.col-md-3
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/condo-logo.svg") alt='image')
+                                    span Condo
+                                .col-4.col-md-3
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/apartment-logo.svg") alt='image')
+                                    span Apartment
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/house-logo.svg") alt='image')
+                                    span House
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/land-logo.svg") alt='image')
+                                    span Land
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/hotel-logo.svg") alt='image')
+                                    span Hotel/ Restaurant
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/shop-logo.svg") alt='image')
+                                    span Shop/Office
+                                .col-4.col-md-3 
+                                  a.icon-wrapper(href='#') 
+                                    .icon
+                                      img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
+                                    span Industrial Zone
+                            .col-12.col-sm-4.col-md-4
+                              .card
+                                img.img-fluid(src=require("@/assets/images/static/family.png") alt='image')
                     li.nav-item.dropdown
                       a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Contact For Owner
                       ul.dropdown-menu.shadow
