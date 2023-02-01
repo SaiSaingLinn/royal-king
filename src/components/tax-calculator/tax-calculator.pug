@@ -11,15 +11,15 @@ mixin tax-calculator
                 label.form-label(for='offerTypes') Offer Type
                 .offer-check-wrap(id="nav-tab" role="tablist")
                   .form-check
-                    input#forSale.form-check-input(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-sale", aria-controls="nav-sale" aria-selected="false")
+                    input#forSale.form-check-input.active(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-sale", aria-controls="nav-sale" aria-selected="true")
                     label.form-check-label(for='forSale')
                       | Property For Sale
                   .form-check
-                    input#forRent.form-check-input.active(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-rent", aria-controls="nav-rent" aria-selected="true")
+                    input#forRent.form-check-input(type='radio', name='offerTypes', data-bs-toggle="tab", data-bs-target="#nav-rent", aria-controls="nav-rent" aria-selected="false")
                     label.form-check-label(for='forRent')
                       | Property For Rent
                 #nav-tabContent.tab-content
-                  #nav-sale.tab-pane.fade(role='tabpanel', aria-labelledby='nav-sale-tab', tabindex='0')
+                  #nav-sale.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-sale-tab', tabindex='0')
                     .row.tab-row
                       .col-12.col-lg-8
                         label.form-label(for='rentPrice') Property Sale Price
@@ -29,7 +29,7 @@ mixin tax-calculator
                       .col-12.col-lg-4
                           button.btn.btn-primary(type='submit') Calculate
 
-                  #nav-rent.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')
+                  #nav-rent.tab-pane.fade(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')
                     .row.tab-row
                       .col-12.col-lg-8
                         label.form-label(for='salePrice') Property Rent Price

@@ -3,6 +3,9 @@
 // // utils
 @import './utils/vars';
 
+// import all jquery theme
+@import "~jquery-ui/dist/themes/base/jquery-ui.min.css";
+
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 

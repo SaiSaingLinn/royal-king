@@ -232,23 +232,23 @@ mixin detail-info(type)
               .sidebar__widget__wrapper
                 h5.title.title-lined
                   | Request Inquiry
-                form(action="#")
+                form(action="#").inquiry-form
                   .input-group.icon-left.mb-3
                     span#name.input-group-text
-                      i.bi.bi-person
+                      img(src=require('@/assets/images/icons/feather-user.svg'), alt="name")
                     input.form-control(type='text', placeholder='Name', aria-label='Name', aria-describedby='name')
                   .input-group.icon-left.mb-3
                     span#phone.input-group-text
-                      i.bi.bi-telephone
+                      img(src=require('@/assets/images/icons/feather-phone.svg'), alt="phone")
                     input.form-control(type='text', placeholder='Phone', aria-label='Phone', aria-describedby='phone')
                   .input-group.icon-left.mb-3
                     span#email.input-group-text
-                      i.bi.bi-envelope
+                      img(src=require('@/assets/images/icons/feather-mail.svg'), alt="mail")
                     input.form-control(type='text', placeholder='Email', aria-label='Email', aria-describedby='email')
                   .input-group.icon-left.mb-3
                     span#date.input-group-text
-                      i.bi.bi-envelope
-                    input.form-control(type='date', placeholder='Request Date', aria-label='Request Date', aria-describedby='date')
+                      img(src=require('@/assets/images/icons/calendar.svg'), alt="calendar")
+                    input.form-control(type='text', id="datepicker", placeholder='Request Date', aria-label='Request Date', aria-describedby='date')
                   .mb-3
                     textarea.form-control(type='text', placeholder='Message', aria-label='Message', aria-describedby='message')
                   button.btn.btn-primary(type='submit') Send Now
@@ -261,22 +261,22 @@ mixin detail-info(type)
                     label.form-label(for='offerTypes') Offer Type
                     .offer-check-wrap(id="nav-tab" role="tablist")
                       .form-check
-                        input#forSale.form-check-input(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-sale", aria-controls="nav-sale" aria-selected="false")
+                        input#forSale.form-check-input.active(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-sale", aria-controls="nav-sale" aria-selected="true")
                         label.form-check-label(for='forSale')
                           | Property For Sale
                       .form-check
-                        input#forRent.form-check-input.active(type='radio', name='offerTypes', checked='', data-bs-toggle="tab", data-bs-target="#nav-rent", aria-controls="nav-rent" aria-selected="true")
+                        input#forRent.form-check-input(type='radio', name='offerTypes', data-bs-toggle="tab", data-bs-target="#nav-rent", aria-controls="nav-rent" aria-selected="false")
                         label.form-check-label(for='forRent')
                           | Property For Rent
                     #nav-tabContent.tab-content
-                      #nav-sale.tab-pane.fade(role='tabpanel', aria-labelledby='nav-sale-tab', tabindex='0')
+                      #nav-sale.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-sale-tab', tabindex='0')
                         .mb-3
                           label.form-label(for='rentPrice') Property Sale Price
                           .input-group.icon-right
                             input.form-control#rentPrice(type='number', placeholder="Enter Price", aria-label="rentPrice", aria-describedby='rentPriceAddon')
                             span#rentPriceAddon.input-group-text Lakhs
 
-                      #nav-rent.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')
+                      #nav-rent.tab-pane.fade(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')
                         .mb3
                           label.form-label(for='salePrice') Property Rent Price
                           .input-group.icon-right

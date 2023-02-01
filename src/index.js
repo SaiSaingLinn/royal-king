@@ -1,6 +1,9 @@
 // project styles
 import '@/scss/styles';
 
+// import all jquery ui
+import 'jquery-ui/dist/jquery-ui.min.js';
+
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 

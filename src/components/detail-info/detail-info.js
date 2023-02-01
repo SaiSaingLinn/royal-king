@@ -9,3 +9,5 @@ if (mapIcon) {
     });
   });
 }
+
+$("#datepicker").datepicker();

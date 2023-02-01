@@ -2,7 +2,7 @@ mixin select-state(type)
   .input-group.icon-left
     label.input-group-text(for=`division`)
       img(src=require("@/assets/images/icons/location.png"))
-    select.form-select(name=`division`, id=`${type}-division`)
+    select.form-select(name=`division`, id=`${type}-division`, aria-label='State/Division', aria-describedby='division')
       option(value='') State/Division
       option(value='yangon') Yangon
       option(value='mandalay') Mandalay

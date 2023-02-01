@@ -45,5 +45,10 @@ $('#photo-nav img').each(function () {
   });
 });
 
+// if close bootstrap #videoTour modal also close embed youtube video from modal body
+$('#videoTour').on('hidden.bs.modal', function (e) {
+  $('#videoTour .modal-body iframe').attr("src", $("#videoTour .modal-body iframe").attr("src"));
+});
+
 
 

@@ -13,7 +13,7 @@
       transform: translateY(-50%);
     }
     .nav.nav-search {
-      column-gap: 5px;
+      column-gap: 3px;
       .nav-item {
         border-radius: 4px 4px 0 0;
         background: #FFF;
@@ -35,6 +35,7 @@
       padding: 1rem;
       background: #FFF;
       border-radius: 0 5px 5px 5px;
+      transform: translateY(-1px);
       .tab-pane {
         .search-form-title {
           font-size: 20px;
