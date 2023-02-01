@@ -17,45 +17,47 @@ mixin contact-form(type)
                     .col-12.col-md-6 
                       .mb-3
                         label.form-label.required(for='propertyType') Property Type
-                        select#propertyType.form-select(aria-label='Property Type', required)
+                        select#propertyType.form-select(aria-label='Property Type', name='type', required)
                           option(value='') Property Type
                           option(value='1') Condo
                           option(value='2') House
                       .mb-3
                         label.form-label.required(for='price') Price
-                        input#price.form-control(type='text', required)
+                        input#price.form-control(type='text', name='price', required)
                       if type === 'rent'
                         .check-wrap.mb-3
                           .form-check
-                            input#urgentSale.form-check-input(type='checkbox', value='')
+                            input#urgentSale.form-check-input(type='checkbox', value='', name='sale_type')
                             label.form-check-label(for='urgentSale')
                               | Urgent Sale
                           .form-check
-                            input#needDeposit.form-check-input(type='checkbox', value='')
+                            input#needDeposit.form-check-input(type='checkbox', value='', name='sale_type')
                             label.form-check-label(for='needDeposit')
                               | Need Deposit Payment
                         .mb-3
                           label.form-label(for='contract') Contract
-                          input#contract.form-control(type='text')
+                          input#contract.form-control(type='text', name='contract')
                       if type === 'sale'
                         .mb-3
                           label.form-label.required(for='address') Property Address
-                          textarea#address.form-control(rows='2', required)
+                          textarea#address.form-control(rows='2', required, name='address')
                       .mb-3
                         label.form-label.required(for='description') Property Description
-                        textarea#description.form-control(rows='3', required)
+                        textarea#description.form-control(rows='3', required, name='description')
                     .col-12.col-md-6 
                       if type === 'rent'
                         .mb-3
                           label.form-label.required(for='address') Property Address
-                          textarea#address.form-control(rows='2', required)
+                          textarea#address.form-control(rows='2', required, name='address')
                       .mb-3
-                        label.form-label(for='map') Map
-                        p Map will go here
+                        label.form-label(for='location') Map
+                        input(type="hidden", name="lat", id="lat")
+                        input(type="hidden", name="lng", id="lng")
+                        #map
                       if type === 'sale'
                         .mb-3 
                           .form-check
-                            input#urgentSale.form-check-input(type='checkbox', value='')
+                            input#urgentSale.form-check-input(type='checkbox', value='', name='sale_type')
                             label.form-check-label(for='urgentSale')
                               | Urgent Sale
 
@@ -67,14 +69,14 @@ mixin contact-form(type)
                     .col-12.col-md-6 
                       .mb-3
                         label.form-label.required(for='name') Name
-                        input#name.form-control(type='text', required)
+                        input#name.form-control(type='text', required, name='name')
                       .mb-3
                         label.form-label.required(for='phone') Phone
-                        input#phone.form-control(type='text', required)
+                        input#phone.form-control(type='text', required, name='phone')
                     .col-12.col-md-6 
                       .mb-3
                         label.form-label(for='email') Email
-                        input#email.form-control(type='email')
+                        input#email.form-control(type='email', name='email')
                   .btn-wrap 
                     button.btn.btn-secondary(type='reset') Cancel
                     button.btn.btn-primary(type='submit') Send
