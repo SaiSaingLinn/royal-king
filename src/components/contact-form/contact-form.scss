@@ -1,5 +1,7 @@
 .contact-form-wrapper {
-  background: url('@/assets/images/static/contact-form-bg.png') no-repeat center/cover;
+  background: url('@/assets/images/static/contact-form-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 60px 0;
   @media screen and (max-width: 767px) {
     padding: 30px 0;

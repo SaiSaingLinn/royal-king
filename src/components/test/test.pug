@@ -3,86 +3,117 @@ mixin map-test
     .container-fluid 
       .row 
         .col-12.col-md-6 
-          .map-action(style="display: flex; flex-direction: column; row-gap: 30px;")
-            .map-action__item(data-target="content1")
-              i.bi.bi-geo-alt
-              p 
-                | Label 1
-            .map-action__item(data-target="content2")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 2 
-            .map-action__item(data-target="content3")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 3
-            .map-action__item(data-target="content4")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 4
-            .map-action__item(data-target="content5")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 5
-            .map-action__item(data-target="content6")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 6
-            .map-action__item(data-target="content7")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 7
-            .map-action__item(data-target="content8")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 8
-            .map-action__item(data-target="content9")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 9
-            .map-action__item(data-target="content10")
-              i.bi.bi-geo-alt 
-              p 
-                | Label 10
+          #map-search(style="height: 750px; width: 100%;")
         .col-12.col-md-6 
-          .city-content(style="height: 500px; overflow: auto; display: flex; flex-direction: column; row-gap: 30px;")
-            .city-content__item#content1 
+          .city-content(style="height: 750px; overflow: auto; display: flex; flex-direction: column; row-gap: 30px;")
+            .city-content__item#1 
               h2 Label 1
-              p 
+              p
+                img(src=require('@/assets/images/icons/map-house.png'), alt="call")
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content2 
+            .city-content__item#2 
               h2 Label 2
               p 
+                img(src=require('@/assets/images/icons/map-condo.png'), alt="call")
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content3 
+            .city-content__item#3 
               h2 Label 3
               p 
+                img(src=require('@/assets/images/icons/map-land.png'), alt="call")
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content4 
+            .city-content__item#4 
               h2 Label 4
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content5 
+            .city-content__item#5 
               h2 Label 5
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content6 
+            .city-content__item#6 
               h2 Label 6
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
-            .city-content__item#content7
+            .city-content__item#7
               h2 Label 7
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content8
+            .city-content__item#8
               h2 Label 8
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content9
+            .city-content__item#9
               h2 Label 9
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
-            .city-content__item#content10
+            .city-content__item#10
               h2 Label 10
               p 
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor. Sed auctor, nisl eget aliquam tincidunt, nunc elit aliquam erat, eget aliquam nunc nisl eget dolor.
+
+  script.
+    let locations = [
+      {id: 1, lat: 16.8057068, lng: 96.1254126, label: 'Label 1', icon: './assets/images/icons/map-house..png'},
+      {id: 2, lat: 16.8457297, lng: 96.1112575, label: 'Label 2', icon: './assets/images/icons/map-condo..png'},
+      {id: 3, lat: 16.7911585, lng: 96.1320139, label: 'Label 3', icon: './assets/images/icons/map-land..png'},
+      {id: 4, lat: 16.8624984, lng: 96.2117965, label: 'Label 4', icon: './assets/images/icons/map-house..png'},
+      {id: 5, lat: 16.9021454, lng: 96.0688683, label: 'Label 5', icon: './assets/images/icons/map-condo..png'},
+      {id: 6, lat: 16.8297222, lng: 96.1765572, label: 'Label 6', icon: './assets/images/icons/map-land..png'},
+      {id: 7, lat: 16.8522958, lng: 96.1746058, label: 'Label 7', icon: './assets/images/icons/map-house..png'},
+      {id: 8, lat: 16.915885, lng: 96.1432253, label: 'Label 8', icon: './assets/images/icons/map-condo..png'},
+      {id: 9, lat: 16.879903, lng: 96.0198544, label: 'Label 9', icon: './assets/images/icons/map-land..png'},
+      {id: 10, lat: 16.7794889, lng: 96.1366192, label: 'Label 10', icon: './assets/images/icons/map-house..png'}
+    ];
+
+    let map;
+
+    function initSearchMap() {
+      map = new google.maps.Map(document.getElementById("map-search"));
+
+      //- center location base on locations array and zoom to fit all locations on map
+      let bounds = new google.maps.LatLngBounds();
+      for (let i = 0; i < locations.length; i++) {
+        bounds.extend(new google.maps.LatLng(locations[i].lat, locations[i].lng));
+      }
+      map.fitBounds(bounds);
+
+      //- add marker base on locations array
+      for (let i = 0; i < locations.length; i++) {
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+          map: map,
+          icon: locations[i].icon,
+          label: {
+            text: `${locations[i].id}`,
+            color: 'red',
+            fontSize: '18px',
+            fontWeight: 'bold',
+          },
+        });
+
+        //- add event listener to marker to show content
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            //- console.log(locations[i].id);
+            //- forEach .city-content__item and remove class active and add class active to .city-content__item#locations[i].id
+            //- and scroll to .city-content__item#locations[i].id
+            let cityContentItems = document.querySelectorAll('.city-content__item');
+            let cityContentWindow = document.querySelector('.city-content');
+            cityContentItems.forEach(function(item) {
+              item.classList.remove('active');
+              if (item.id == locations[i].id) {
+                item.classList.add('active');
+                
+                //- //- scroll to .city-content__item#locations[i].id
+                cityContentWindow.scrollTo({
+                  top: item.offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          }
+        })(marker, i));
+      }
+    }
+
+    window.initSearchMap = initSearchMap;
+    
