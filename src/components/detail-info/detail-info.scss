@@ -99,6 +99,7 @@
         justify-content: space-between;
         border-bottom: 2px solid #EBEBEB;
         padding-bottom: 12px;
+        column-gap: 30px;
         @media screen and (max-width: 1199px) {
           flex-direction: column;
           align-items: flex-start;
@@ -107,6 +108,7 @@
         .price-wrap {
           display: flex;
           align-items: center;
+          flex: none;
           .price {
             font-size: 32px;
             font-family: 'DM Serif Display', serif;
@@ -136,11 +138,12 @@
           row-gap: 15px;
           @include media-breakpoint-up(sm) {
             flex-direction: row;
-            column-gap: 40px;
+            column-gap: 30px;
             align-items: center;
           }
           .view-count {
             font-size: 18px;
+            flex: none;
           }
           .social-share {
             .btn-share {
@@ -150,9 +153,18 @@
               }
             }
             .sharethis-inline-share-buttons {
+              @include media-breakpoint-down(xxl) {
+                width: 100%;
+                display: flex !important;
+                flex-wrap: wrap;
+                row-gap: 7px;
+              }
               .st-btn {
                 min-width: 50px !important;
                 display: inline-block !important;
+                @include media-breakpoint-down(xxl) {
+                  width: 30px;
+                }
                 .st-label {
                   display: none !important;
                 }

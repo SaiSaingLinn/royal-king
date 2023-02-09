@@ -11,6 +11,7 @@ import * as bootstrap from 'bootstrap'
 import 'slick-slider';
 
 // import all components ui
+import '@/scripts/common/isNumber';
 import '@/components/news-slider/news-slider';
 import '@/components/detail-banner/detail-banner';
 import '@/components/detail-info/detail-info';

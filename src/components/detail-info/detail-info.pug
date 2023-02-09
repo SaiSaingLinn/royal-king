@@ -240,7 +240,7 @@ mixin detail-info(type)
                   .input-group.icon-left.mb-3
                     span#phone.input-group-text
                       img(src=require('@/assets/images/icons/feather-phone.svg'), alt="phone")
-                    input.form-control(type='number', placeholder='Phone', aria-label='Phone', aria-describedby='phone')
+                    input.form-control.isNumber(type='text', placeholder='Phone', aria-label='Phone', aria-describedby='phone')
                   .input-group.icon-left.mb-3
                     span#email.input-group-text
                       img(src=require('@/assets/images/icons/feather-mail.svg'), alt="mail")
@@ -273,14 +273,14 @@ mixin detail-info(type)
                         .mb-3
                           label.form-label(for='rentPrice') Property Sale Price
                           .input-group.icon-right
-                            input.form-control#rentPrice(type='number', placeholder="Enter Price", aria-label="rentPrice", aria-describedby='rentPriceAddon')
+                            input.form-control#rentPrice.isNumber(type='text', placeholder="Enter Price", aria-label="rentPrice", aria-describedby='rentPriceAddon')
                             span#rentPriceAddon.input-group-text Lakhs
 
                       #nav-rent.tab-pane.fade(role='tabpanel', aria-labelledby='nav-rent-tab', tabindex='0')
                         .mb3
                           label.form-label(for='salePrice') Property Rent Price
                           .input-group.icon-right
-                            input.form-control#salePrice(type='number', placeholder="Enter Price", aria-label="salePrice", aria-describedby='salePriceAddon')
+                            input.form-control#salePrice.isNumber(type='text', placeholder="Enter Price", aria-label="salePrice", aria-describedby='salePriceAddon')
                             span#salePriceAddon.input-group-text Lakhs
                   .mb-3
                     button.btn.btn-primary(type='submit') Calculate
