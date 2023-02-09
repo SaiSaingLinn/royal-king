@@ -133,6 +133,12 @@
           display: flex;
           align-items: center;
           column-gap: 40px;
+          flex-direction: column;
+          @include media-breakpoint-up(sm) {
+            flex-direction: row;
+            row-gap: 15px;
+            align-items: flex-start;
+          }
           .view-count {
             font-size: 18px;
           }
@@ -141,6 +147,15 @@
               font-size: 18px;
               img {
                 margin-right: 10px;
+              }
+            }
+            .sharethis-inline-share-buttons {
+              .st-btn {
+                min-width: 50px !important;
+                display: inline-block !important;
+                .st-label {
+                  display: none !important;
+                }
               }
             }
           }

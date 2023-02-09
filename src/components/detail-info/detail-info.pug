@@ -43,10 +43,10 @@ mixin detail-info(type)
                   p.view-count 
                     | View count : 100000
                   .social-share 
-                    button.btn.btn-light.btn-share
-                      img(src=require('@/assets/images/icons/share.svg') alt='image')
-                      | Share
-                    .fb-share-button(data-href='https://king.innovix.digital/detail.html')
+                    //- button.btn.btn-light.btn-share
+                    //-   img(src=require('@/assets/images/icons/share.svg') alt='image')
+                    //-   | Share
+                    .sharethis-inline-share-buttons
             .description-wrapper
               .detail-info__description
                 .description 
@@ -240,11 +240,11 @@ mixin detail-info(type)
                   .input-group.icon-left.mb-3
                     span#phone.input-group-text
                       img(src=require('@/assets/images/icons/feather-phone.svg'), alt="phone")
-                    input.form-control(type='text', placeholder='Phone', aria-label='Phone', aria-describedby='phone')
+                    input.form-control(type='number', placeholder='Phone', aria-label='Phone', aria-describedby='phone')
                   .input-group.icon-left.mb-3
                     span#email.input-group-text
                       img(src=require('@/assets/images/icons/feather-mail.svg'), alt="mail")
-                    input.form-control(type='text', placeholder='Email', aria-label='Email', aria-describedby='email')
+                    input.form-control(type='email', placeholder='Email', aria-label='Email', aria-describedby='email')
                   .input-group.icon-left.mb-3
                     span#date.input-group-text
                       img(src=require('@/assets/images/icons/calendar.svg'), alt="calendar")
@@ -300,3 +300,5 @@ mixin detail-info(type)
             +property-card('sale', '', '')
           .col-12.col-sm-6.col-lg-4
             +property-card('sale', '', '')
+  script(type='text/javascript', src='https://platform-api.sharethis.com/js/sharethis.js#property=63e3b15eb2f3620019abbb00&product=inline-share-buttons&source=platform', async='async')
+

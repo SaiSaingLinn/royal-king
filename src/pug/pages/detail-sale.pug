@@ -6,22 +6,9 @@ include /components/detail-info/detail-info
 block variables
   - const title = 'Detail'
   - const description = 'Page description'
-  - const ogUrl = 'https://king.innovix.digital/detail.html'
-  - const ogTitle = 'Luxury Villa In Yangon'
-  - const ogDescription = 'King Real Estate Group is a leading real estate company in Yangon, Myanmar. We provide a wide range of real estate services including property sales, property rentals, property management, and property development.'
-  - const ogImage = 'https://king.innovix.digital/assets/images/static/detail-banner1..jpg'
 
 block content
   +header
   .wrapper
     +detail-banner
     +detail-info('sale')
-  #fb-root
-    script.
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
