@@ -131,13 +131,13 @@
         }
         .social {
           display: flex;
-          align-items: center;
-          column-gap: 40px;
+          align-items: flex-start;
           flex-direction: column;
+          row-gap: 15px;
           @include media-breakpoint-up(sm) {
             flex-direction: row;
-            row-gap: 15px;
-            align-items: flex-start;
+            column-gap: 40px;
+            align-items: center;
           }
           .view-count {
             font-size: 18px;
