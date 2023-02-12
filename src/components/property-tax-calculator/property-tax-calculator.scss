@@ -3,9 +3,10 @@
   padding-bottom: 50px;
   padding-top: 50px;
   text-align: center;
-  @media screen and (max-width: 767px) {
+  @include media-breakpoint-down(md) {
     padding-bottom: 30px;
     padding-top: 30px;
+    background: url('@/assets/images/static/tax-bg-mobile.png') no-repeat center/cover;
   }
   .title {
     font-family: 'DM Serif Display', serif;
@@ -31,6 +32,15 @@
     color: #333333;
     text-transform: uppercase;
     transition: all .3s ease;
+    @include media-breakpoint-down(sm) {
+      width: 200px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
     img {
       width: 18px;
       margin-right: 10px;

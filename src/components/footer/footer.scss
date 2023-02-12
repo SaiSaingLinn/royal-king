@@ -3,6 +3,11 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   color: #CCC;
+  @include media-breakpoint-down(md) {
+    background: url('@/assets/images/static/footer-bg-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .top-footer {
     padding-bottom: 30px;
     .top-footer-row {
@@ -20,6 +25,9 @@ footer {
       margin-left: 20px;
       @include media-breakpoint-up(xxl) {
         border-radius: 0 0 140px 140px;
+      }
+      @include media-breakpoint-down(sm) {
+        border-radius: 0 0 50% 50%;
       }
       .logo {
         margin-bottom: 22px;
@@ -42,6 +50,9 @@ footer {
     }
     .footer-info {
       padding-top: 50px;
+      @include media-breakpoint-down(sm) {
+        padding-top: 0px;
+      }
       .title {
         font-size: 20px;
         margin-bottom: 20px;
@@ -91,6 +102,20 @@ footer {
         }
       }
     }
+    .mobile-footer {
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .desktop-footer {
+      display: flex;
+      flex-direction: column;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
   }
   .bottom-footer {
     font-size: 16px;
@@ -98,11 +123,24 @@ footer {
     .bottom-footer-wrapper {
       border-top: 1px solid #777777;
       padding: 25px 0;
+      @include media-breakpoint-down(md) {
+        border-top: 0 none;
+      }
+      .bottom-footer-wrapper-row {
+        row-gap: 0px;
+        @include media-breakpoint-down(md) {
+          row-gap: 20px;
+        }
+      }
     }
     .bottom-footer-row {
       row-gap: 20px;
     }
     .copyright {
+      @include media-breakpoint-down(md) {
+        border-top: 1px solid #777777;
+        padding-top: 20px;
+      }
       a {
         color: #ADCE00;
       }

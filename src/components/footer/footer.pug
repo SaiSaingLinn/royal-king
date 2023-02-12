@@ -6,11 +6,26 @@ mixin footer
       .container
         .row.top-footer-row
           .col-12.col-md-4 
-            .footer-info
+            .footer-logo.mobile-footer 
+              .logo
+                img.img-fluid(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
+              .social-icons
+                a(href='https://www.facebook.com/' target='_blank')
+                  img.img-fluid(src=require("@/assets/images/icons/facebook.svg") alt='image')
+                a(href='https://instagram.com/' target='_blank')
+                  img.img-fluid(src=require("@/assets/images/icons/instagram.png") alt='image')
+                a(href='tel: +1234567890')
+                  img.img-fluid(src=require("@/assets/images/icons/telegram.svg") alt='image')
+                a(href='tel: +1234567890')
+                  img.img-fluid(src=require("@/assets/images/icons/viber.svg") alt='image')
+            .footer-info.desktop-footer
               h5.title About King Real Estate Service Group
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           .col-12.col-md-4 
-            .footer-logo 
+            .footer-info.mobile-footer
+              h5.title About King Real Estate Service Group
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .footer-logo.desktop-footer
               .logo
                 img.img-fluid(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
               .social-icons
@@ -46,11 +61,11 @@ mixin footer
         .row.bottom-footer-row
           .col-12
             .bottom-footer-wrapper
-              .row
-                .col-12.col-md-6 
+              .row.bottom-footer-wrapper-row
+                .col-12.col-md-6.order-2.order-md-1 
                   p.copyright <script>document.write(new Date().getFullYear());</script> © Copyright - All Rights Reserved. Powered By 
                     a(href='https://innovixdigital.com' target="_blank") Innovix Digital
-                .col-12.col-md-6 
+                .col-12.col-md-6.order-1.order-md-2
                   .footer-menu
                     ul
                       li

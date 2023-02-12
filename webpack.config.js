@@ -55,7 +55,7 @@ module.exports = {
   output: {
     filename: getFileName('js'),
     path: DIST,
-    assetModuleFilename: '[path][name].[ext]'
+    assetModuleFilename: '[path][name][ext]'
   },
   devServer: {
     port: 4200,

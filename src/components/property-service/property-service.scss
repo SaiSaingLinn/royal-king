@@ -21,13 +21,13 @@
       row-gap: 30px;
     }
     .service-card {
-      @media screen and (max-width: 767px) {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-      }
+      // @media screen and (max-width: 767px) {
+      //   display: flex;
+      //   align-items: center;
+      //   flex-direction: column;
+      //   justify-content: center;
+      //   text-align: center;
+      // }
       .icon {
         margin-bottom: 12px;
         img {

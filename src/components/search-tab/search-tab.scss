@@ -8,9 +8,9 @@
     padding: 0;
   }
   .nav-tab-wrapper {
-    transform: translateY(0);
-    @media screen and (min-width: 1200px) {
-      transform: translateY(-50%);
+    transform: translateY(-50%);
+    @include media-breakpoint-down(lg) {
+      transform: translateY(0%);
     }
     .nav.nav-search {
       column-gap: 3px;
@@ -27,6 +27,9 @@
           &.active {
             background: #FFF;
             font-weight: 500;
+          }
+          @include media-breakpoint-down(lg) {
+            padding: 8px 12px;
           }
         }
       }
@@ -49,6 +52,9 @@
                 text-transform: uppercase;
                 font-weight: 500;
                 min-width: 140px;
+                @include media-breakpoint-down(lg) {
+                  width: 100%;
+                }
               }
             }
           }

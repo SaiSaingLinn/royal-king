@@ -8,7 +8,8 @@ mixin header(type)
               img.img-fluid.desktop(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
               img.img-fluid.mobile(src=require("@/assets/images/static/royal-king-logo.png") alt='image')
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbar-content', aria-controls='navbar-content', aria-expanded='false', aria-label='Toggle navigation')
-              span.navbar-toggler-icon
+              //- span.navbar-toggler-icon
+              img(src=require("@/assets/images/icons/menu.png") alt='image')
             #navbar-content.collapse.navbar-collapse
               .navbar-content-wrapper
                 .contact-info
@@ -182,3 +183,14 @@ mixin header(type)
                       a.nav-link(href='news.html') News & Update
                     li.nav-item
                       a.nav-link(href='about.html') About Us
+                    li.nav-item.mobile-item 
+                      a.nav-link(mailto= 'info@abc.com')
+                        i.bi.bi-envelope
+                        | info@abc.com
+                      a.nav-link(tel='091234567')
+                        i.bi.bi-phone
+                        | +95123456789
+                    li.nav-item.mobile-item
+                      .nav-link
+                        img(src=require("@/assets/images/icons/myanmar.png") alt='image')
+                        | Language

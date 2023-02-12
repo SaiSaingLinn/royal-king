@@ -34,4 +34,9 @@
   .carousel-control-next {
     right: -20px;
   }
+  .carousel-control-next, .carousel-control-prev {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
 }
