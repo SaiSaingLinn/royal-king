@@ -1,11 +1,21 @@
 .search-form-wrapper {
   .search-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .hide-lg {
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
     .search-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       row-gap: 10px;
       column-gap: 10px;
+      align-items: center;
       @media screen and (min-width: 1400px) {
         flex-wrap: nowrap;
       }
@@ -22,6 +32,12 @@
         }
         @include media-breakpoint-up(xl) {
           width: 100%;
+        }
+        &.hide-sm {
+          display: block;
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
         }
       }
     }

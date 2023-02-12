@@ -2,8 +2,9 @@ include ../price-range/price-range
 include ../property-type/property-type
 include ../select-state-township/select-state
 include ../select-state-township/select-township
+include ../advance-search/advance-search
 
-mixin search-form(type)
+mixin search-form(type, page)
   .search-form-wrapper 
     form.search-form(action='/?', method='get', autocomplete='off')
       input(type='hidden', name='offer', value=type)
@@ -21,6 +22,11 @@ mixin search-form(type)
           +select-township(type)
         .search-col
           +price-range(type)
-        .search-col
+        .search-col(class = page == 'search' ? 'hide-sm' : '')
+          .form-group
+            button#search-submit.btn.btn-primary.btn-block(type='submit') Search
+      if page == 'search'
+        +advance-search(type)
+        .search-col.hide-lg
           .form-group
             button#search-submit.btn.btn-primary.btn-block(type='submit') Search

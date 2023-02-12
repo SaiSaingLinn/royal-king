@@ -25,3 +25,4 @@ import '@/components/property-type/property-type';
 import '@/components/select-state-township/select-state-township';
 import '@/components/loading/loading';
 import '@/components/map-search/map-search';
+import '@/components/search-form/search-form';

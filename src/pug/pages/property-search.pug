@@ -1,7 +1,7 @@
 extends ../layouts/main
 include /components/header/header
-include /components/advance-search/advance-search
 include /components/map-search/map-search
+include /components/search-tab/search-tab
 
 block variables
   - const title = 'Property Search'
@@ -10,5 +10,5 @@ block variables
 block content
   +header
   .wrapper
-    +advance-search
+    +search-tab('search')
     +map-search

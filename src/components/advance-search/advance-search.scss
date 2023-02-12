@@ -1,4 +1,34 @@
-.advance-search-wrapper {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.advance-btn-wrap {
+  @include media-breakpoint-up(lg) {
+    width: 20% !important;
+  }
+  .advance-btn {
+    display: flex;
+    align-items: center;
+    .icon {
+      background: #000;
+      color: #FFF;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      flex: none;
+    }
+    .bi-dash {
+      display: none;
+    }
+    .bi-plus {
+      display: inline-flex;
+    }
+    &.active {
+      .bi-dash {
+        display: inline-flex;
+      }
+      .bi-plus {
+        display: none;
+      }
+    }
+  }
 }
