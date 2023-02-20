@@ -4,9 +4,9 @@
     flex-direction: column;
     row-gap: 20px;
     .hide-lg {
-      display: none;
-      @include media-breakpoint-down(sm) {
-        display: block;
+      display: block;
+      @include media-breakpoint-up(lg) {
+        display: none;
       }
     }
     .search-row {
@@ -34,9 +34,9 @@
           width: 100%;
         }
         &.hide-sm {
-          display: block;
-          @include media-breakpoint-down(sm) {
-            display: none;
+          display: none;
+          @include media-breakpoint-up(lg) {
+            display: block;
           }
         }
       }

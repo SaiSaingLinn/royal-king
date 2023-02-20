@@ -1,4 +1,8 @@
 #property-type-wrapper {
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
   #type-option-wrapper {
     display: none;
   }
@@ -89,3 +93,14 @@
     }
   }
 }
+#property-type-wrapper-sm {
+  display: block;
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+// .home-search-tab {
+//   #property-type-wrapper {
+//     display: block;
+//   }
+// }

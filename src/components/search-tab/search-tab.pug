@@ -1,54 +1,46 @@
 include ../search-form/search-form
 
 mixin search-tab(page)
-  if page == 'search'
-    .mobile-action-wrapper
-      .container
-        .filter-btn-wrapper
-          button#map-btn.btn.btn-outline-secondary.btn-sm(type='button')
-            i.bi.bi-map
-            | Map
-          button#list-btn.btn.btn-dark.btn-sm(type='button')
-            i.bi.bi-list
-            | List
-          button.btn.btn-primary.btn-sm(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasNavbar', aria-controls='offcanvasNavbar')
-            | Show Filter
-          #offcanvasNavbar.offcanvas.offcanvas-end(tabindex='-1', aria-labelledby='offcanvasNavbarLabel')
-            .offcanvas-header
-              h5#offcanvasNavbarLabel.offcanvas-title Search Property
-              button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
-            .offcanvas-body
-              //- .search-tab-wrapper(class=page == 'search' ? 'search-tab-wrapper-sm' : '')
-              //-   .container
-              //-     .row 
-              //-       .col-12
-              //-         .nav-tab-wrapper
-              //-           ul#pills-tab.nav.nav-search.nav-pills(role='tablist')
-              //-             li.nav-item(role='presentation')
-              //-               button#pills-sale-tab.nav-link.active(data-bs-toggle='pill', data-bs-target='#pills-sale', type='button', role='tab', aria-controls='pills-sale', aria-selected='true') For Sale
-              //-             li.nav-item(role='presentation')
-              //-               button#pills-rent-tab.nav-link(data-bs-toggle='pill', data-bs-target='#pills-rent', type='button', role='tab', aria-controls='pills-rent', aria-selected='false') For Rent
-              //-           #pills-tabContent.tab-content
-              //-             #pills-sale.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-sale-tab', tabindex='0')
-              //-               h2.search-form-title Search Property For Sale
-              //-               +search-form('sale', page)
-              //-             #pills-rent.tab-pane.fade(role='tabpanel', aria-labelledby='pills-rent-tab', tabindex='0')
-              //-               h2.search-form-title Search Property For Rent
-              //-               +search-form('rent', page)
-  .search-tab-wrapper(class=page == 'search' ? 'search-tab-wrapper-lg' : '')
+  //- if page == 'search'
+  //-   .mobile-action-wrapper
+  //-     .container
+  //-       .filter-btn-wrapper
+  //-         button#map-btn.btn.btn-outline-secondary.btn-sm(type='button')
+  //-           i.bi.bi-map
+  //-           | Map
+  //-         button#list-btn.btn.btn-dark.btn-sm(type='button')
+  //-           i.bi.bi-list
+  //-           | List
+  //-         button.btn.btn-primary.btn-sm(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasNavbar', aria-controls='offcanvasNavbar')
+  //-           | Show Filter
+  //-         #offcanvasNavbar.offcanvas.offcanvas-end(tabindex='-1', aria-labelledby='offcanvasNavbarLabel')
+  //-           .offcanvas-header
+  //-             h5#offcanvasNavbarLabel.offcanvas-title Search Property
+  //-             button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+  //-           .offcanvas-body
+  //-             .search-tab-wrapper(class=page == 'search' ? 'search-tab-wrapper-sm' : '')
+  //-               .container
+  //-                 .row 
+  //-                   .col-12
+  //-                     .nav-tab-wrapper
+  //-                       +search-form('rent', page)
+  .search-tab-wrapper(class=page == 'search' ? 'search-tab-wrapper-lg' : 'home-search-tab')
     .container
       .row 
         .col-12
-          .nav-tab-wrapper
-            ul#pills-tab.nav.nav-search.nav-pills(role='tablist')
-              li.nav-item(role='presentation')
-                button#pills-sale-tab.nav-link.active(data-bs-toggle='pill', data-bs-target='#pills-sale', type='button', role='tab', aria-controls='pills-sale', aria-selected='true') For Sale
-              li.nav-item(role='presentation')
-                button#pills-rent-tab.nav-link(data-bs-toggle='pill', data-bs-target='#pills-rent', type='button', role='tab', aria-controls='pills-rent', aria-selected='false') For Rent
-            #pills-tabContent.tab-content
-              #pills-sale.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-sale-tab', tabindex='0')
-                h2.search-form-title Search Property For Sale
-                +search-form('sale', page)
-              #pills-rent.tab-pane.fade(role='tabpanel', aria-labelledby='pills-rent-tab', tabindex='0')
-                h2.search-form-title Search Property For Rent
-                +search-form('rent', page)
+          if page == 'search'
+            +search-form('sale', page)
+          else
+            .nav-tab-wrapper
+              ul#pills-tab.nav.nav-search.nav-pills(role='tablist')
+                li.nav-item(role='presentation')
+                  button#pills-sale-tab.nav-link.active(data-bs-toggle='pill', data-bs-target='#pills-sale', type='button', role='tab', aria-controls='pills-sale', aria-selected='true') For Sale
+                li.nav-item(role='presentation')
+                  button#pills-rent-tab.nav-link(data-bs-toggle='pill', data-bs-target='#pills-rent', type='button', role='tab', aria-controls='pills-rent', aria-selected='false') For Rent
+              #pills-tabContent.tab-content
+                #pills-sale.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-sale-tab', tabindex='0')
+                  h2.search-form-title Search Property For Sale
+                  +search-form('sale', page)
+                #pills-rent.tab-pane.fade(role='tabpanel', aria-labelledby='pills-rent-tab', tabindex='0')
+                  h2.search-form-title Search Property For Rent
+                  +search-form('rent', page)

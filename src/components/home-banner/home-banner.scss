@@ -1,5 +1,21 @@
 .home-banner-slider {
   overflow: hidden;
+  .carousel-item {
+    .banner-lg {
+      width: 100%;
+      display: block;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+    .banner-sm {
+      width: 100%;
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+  }
   .caption-wrapper {
     position: absolute;
     top: 50%;
@@ -18,13 +34,19 @@
       text-align: left;
       transform: translateY(-50%);
       h5 {
-        font-size: 28px;
+        font-size: 18px;
         font-family: 'DM Serif Display', serif;
         margin-bottom: 18px;
+        @include media-breakpoint-up(md) {
+          font-size: 28px;
+        }
       }
       p {
-        font-size: 48px;
+        font-size: 28px;
         font-family: 'DM Serif Display', serif;
+        @include media-breakpoint-up(md) {
+          font-size: 48px;
+        }
       }
     }
   }

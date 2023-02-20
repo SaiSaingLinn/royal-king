@@ -1,11 +1,11 @@
-mixin advance-search(type)
+mixin advance-search
   .search-row
     .search-col.advance-btn-wrap
-      button.btn.btn-light.advance-btn(type='button', id=`${type}-advance-search`)
+      button.btn.btn-light.advance-btn(type='button', class=`advance-search`)
         i.bi.bi-plus.icon
         i.bi.bi-dash.icon
         | Advance Search
-    .advance-search-input(id=`${type}-advance-search-input`)
+    .advance-search-input(class=`advance-search-input`)
       .search-row
         .search-col
           .input-group

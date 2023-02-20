@@ -15,3 +15,9 @@ $('#typeTabContent button').on('click', function (e) {
   $(this).parents('.tab-content-wrap').find('button').removeClass('active');
   $(this).addClass('active');
 });
+
+if (window.innerWidth < 576) {
+  $('#property-type-wrapper .type-lg').remove();
+} else {
+  $('#property-type-wrapper-sm .type-sm').remove();
+}

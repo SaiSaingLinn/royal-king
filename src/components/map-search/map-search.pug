@@ -1,50 +1,590 @@
-mixin map-search(type)
-  .map-search-wrapper 
-    .container-fluid 
-      .row 
-        .col-6 
-          #map-search 
-        //- .col-6
-        //-   .map-search-card__wrapper 
-        //-     .map-search-card 
-        //-       .map-search-card__header 
-        //-         h3.map-search-card__title 
-        //-           | Property for sale in Myanmar
-        //-       .map-search-card__body 
-        //-         .map-search-card__item 
-        //-           .map-search-card__item__img 
-        //-             img(src=require("@/assets/images/static/card.jpg"))
-        //-             .label 
-        //-               p.label__text.sale
-        //-                 | For Sale
-        //-           .map-search-card__item__content 
-        //-             .price-wrap
-        //-               p.card-price 800 Lakhs
-        //-                 span.card-bank Bank Installment
-        //-             h4.map-search-card__item__title 
-        //-               | Luxury Villa In Yangon
-        //-             .map-search-card__item__description 
-        //-               | Lorem ipsum dolor sit amet, consetetur sadips cing elitr, sed diam nonumy eirmod tempor
-        //-             .map-search-card__footer 
-        //-               .map-search-card__footer__icon 
-        //-                 img(src=require("@/assets/images/icons/card-apartment.svg"))
-        //-                 p.map-search-card__footer__text 
-        //-                   | 03
-        //-               .map-search-card__footer__icon 
-        //-                 img(src=require("@/assets/images/icons/card-bath.svg"))
-        //-                 p.map-search-card__footer__text 
-        //-                   | 02
-        //-               .map-search-card__footer__icon 
-        //-                 img(src=require("@/assets/images/icons/card-bed.svg"))
-        //-                 p.map-search-card__footer__text 
-        //-                   | Condo
-        //-               .map-search-card__footer__icon 
-        //-                 img(src=require("@/assets/images/icons/card-square.svg"))
-        //-                 p.map-search-card__footer__text 
-        //-                   | 1800sqft
-        //-             .map-search-card__btn
-        //-               a(href='detail-sale.html').btn.btn-primary
-        //-                 | View Detail
-        //-               a(href='tel:0999999999').btn.btn-secondary
-        //-                 img(src=require('@/assets/images/icons/feather-phone-call.svg'), alt="call")
-        //-                 | Call Now
+include ../search-form/search-form
+include ../property-card/property-card
+
+mixin map-search(type, page)
+  .mobile-action-wrapper
+    .container
+      .filter-btn-wrapper
+        .map-list-btn-wrap
+          button#map-btn.btn.btn-dark.btn-sm(type='button')
+            img.img-active(src=require("@/assets/images/icons/awesome-map-marked.svg"))
+            img.img-not-active(src=require("@/assets/images/icons/awesome-map-marked-active.svg"))
+            | Map
+          button#list-btn.btn.btn-light.btn-sm(type='button')
+            i.bi.bi-list-ul
+            | List
+        .show-filter-wrap
+          button#show-filter.btn.btn-primary.btn-sm(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasNavbar', aria-controls='offcanvasNavbar')
+            | Show Filter
+        #offcanvasNavbar.offcanvas.offcanvas-end(tabindex='-1', aria-labelledby='offcanvasNavbarLabel')
+          .offcanvas-header
+            h5#offcanvasNavbarLabel.offcanvas-title Search Property
+            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+          .offcanvas-body
+            .search-tab-wrapper(class='search-tab-wrapper-sm')
+              .container
+                .row 
+                  .col-12
+                    .nav-tab-wrapper
+                      +search-form(type, page)
+  .tab-wrapper 
+    .container
+      h2.mobile-title Property for sale in Myanmar
+    .map-search-wrapper#mobile-map-search
+      .container-fluid.p-0(style="overflow-x: hidden; border: 1px solid #0000001F; border-right: 0 none; border-left: 0 none;")
+        .row 
+          .col-12.col-lg-6 
+            #map-search(style="height: 600px; width: 100%;")
+          .col-12.col-lg-6.d-none.d-lg-block 
+            h2.search-title Property for sale in Myanmar
+            .city-content(style="height: 535px; overflow: auto; display: flex; flex-direction: column; row-gap: 25px;margin-top: 15px; margin-bottom: 15px;")
+              .city-content__item#1 
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.sale 
+                          | For Sale
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-bank Bank Installment
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#2
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.rent
+                          | For Rent
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-month / month
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#3
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.sale 
+                          | For Sale
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-bank Bank Installment
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#4
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.rent
+                          | For Rent
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-month / month
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#5
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.sale 
+                          | For Sale
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-bank Bank Installment
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#6
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.rent
+                          | For Rent
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-month / month
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#7
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.sale 
+                          | For Sale
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-bank Bank Installment
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#8
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.rent
+                          | For Rent
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-month / month
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#9
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.sale 
+                          | For Sale
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-bank Bank Installment
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+              .city-content__item#10
+                .map-search-card__wrapper
+                  .card 
+                    .card-image 
+                      img(src=require('@/assets/images/static/search-card.jpg') alt='image')
+                      .card-label 
+                        p.card-label-text.rent
+                          | For Rent
+                    .card-content 
+                      .price-wrap
+                        p.card-price 800 Lakhs
+                        p.card-month / month
+                      h3.card-title 
+                        | Luxury Villa In Yangon
+                      p.card-location
+                        i.bi.bi-geo-alt
+                        | Mayangone Township, Yangon
+                      .card-footer 
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bed.svg"))
+                          p.card-footer-text 
+                            | 03
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-bath.svg"))
+                          p.card-footer-text 
+                            | 02
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-apartment.svg"))
+                          p.card-footer-text 
+                            | Condo
+                        .card-footer-icon 
+                          img(src=require("@/assets/images/icons/card-square.svg"))
+                          p.card-footer-text 
+                            | 1800sqft
+                      .card-footer-button 
+                        a(href="detail-sale.html").btn.btn-primary
+                          | View Detail
+                        a(tel="0912345678").btn.btn-light.btn-call
+                          img(src=require("@/assets/images/icons/phone-call-black.svg"))
+                          | Call
+    .card-lists#mobile-card-lists
+      .container 
+        .row.card-lists-row(style="row-gap: 15px;")
+          .col-12.col-sm-6 
+            .mobile-card#1
+              +property-card('sale', 'bank', '')
+          .col-12.col-sm-6
+            .mobile-card#2
+              +property-card('sold', '', '')
+          .col-12.col-sm-6
+            .mobile-card#3
+              +property-card('rent', '', 'month')
+          .col-12.col-sm-6
+            .mobile-card#4
+              +property-card('sale', '', '')
+          .col-12.col-sm-6
+            .mobile-card#5
+              +property-card('sale', '', '')
+          .col-12.col-sm-6
+            .mobile-card#6
+              +property-card('sale', '', '')
+          .col-12.col-sm-6
+            .mobile-card#7
+              +property-card('rent', '', 'month')
+          .col-12.col-sm-6
+            .mobile-card#8
+              +property-card('sale', '', '')
+          .col-12.col-sm-6
+            .mobile-card#9
+              +property-card('sale', '', '')
+          .col-12.col-sm-6
+            .mobile-card#10
+              +property-card('sale', '', '')           
+    #popupCard.modal.fade(tabindex='-1', aria-labelledby='popupCardLabel', aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.container
+        .modal-content(style="background: transparent; border: 0 none;")
+          .modal-body(style="padding: 0;")
+          .modal-footer(style="justify-content: center;")
+            .btn-close-mobile
+              i.bi.bi-x-circle-fill(style="font-size: 30px; color: #fff;")
+
+  script.
+    let locations = [
+      {id: 1, lat: 16.8057068, lng: 96.1254126, label: 'Label 1', icon: './assets/images/icons/map-house.png'},
+      {id: 2, lat: 16.8457297, lng: 96.1112575, label: 'Label 2', icon: './assets/images/icons/map-condo.png'},
+      {id: 3, lat: 16.7911585, lng: 96.1320139, label: 'Label 3', icon: './assets/images/icons/map-land.png'},
+      {id: 4, lat: 16.8624984, lng: 96.2117965, label: 'Label 4', icon: './assets/images/icons/map-house.png'},
+      {id: 5, lat: 16.9021454, lng: 96.0688683, label: 'Label 5', icon: './assets/images/icons/map-condo.png'},
+      {id: 6, lat: 16.8297222, lng: 96.1765572, label: 'Label 6', icon: './assets/images/icons/map-land.png'},
+      {id: 7, lat: 16.8522958, lng: 96.1746058, label: 'Label 7', icon: './assets/images/icons/map-house.png'},
+      {id: 8, lat: 16.915885, lng: 96.1432253, label: 'Label 8', icon: './assets/images/icons/map-condo.png'},
+      {id: 9, lat: 16.879903, lng: 96.0198544, label: 'Label 9', icon: './assets/images/icons/map-land.png'},
+      {id: 10, lat: 16.7794889, lng: 96.1366192, label: 'Label 10', icon: './assets/images/icons/map-house.png'}
+    ];
+
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map-search"));
+
+      //- center location base on locations array and zoom to fit all locations on map
+      let bounds = new google.maps.LatLngBounds();
+      for (let i = 0; i < locations.length; i++) {
+        bounds.extend(new google.maps.LatLng(locations[i].lat, locations[i].lng));
+      }
+      map.fitBounds(bounds);
+
+      //- add marker base on locations array
+      for (let i = 0; i < locations.length; i++) {
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+          map: map,
+          icon: locations[i].icon
+        });
+
+        //- add event listener to marker to show content
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            //- console.log(locations[i].id);
+            //- forEach .city-content__item and remove class active and add class active to .city-content__item#locations[i].id
+            //- and scroll to .city-content__item#locations[i].id
+            let cityContentItems = document.querySelectorAll('.city-content__item');
+            let cityContentWindow = document.querySelector('.city-content');
+            cityContentItems.forEach(function(item) {
+              item.classList.remove('active');
+              if (item.id == locations[i].id) {
+                item.classList.add('active');
+                //- //- scroll to .city-content__item#locations[i].id
+                cityContentWindow.scrollTo({
+                  top: item.offsetTop - 400,
+                  behavior: 'smooth'
+                });
+              }
+            });
+
+            if (window.innerWidth < 992) {
+              //- open bootstrap modal with id popupCard
+              //- add modal-open class to body
+              //- add style to body
+              let popupCard = document.querySelector('#popupCard');
+              popupCard.classList.add('show');
+              popupCard.setAttribute('aria-modal', 'true');
+              popupCard.setAttribute('role', 'dialog')
+              popupCard.setAttribute('style', 'display: block; padding-right: 17px;');
+              document.body.classList.add('modal-open');
+              document.body.setAttribute('style', 'padding-right: 17px;');
+
+              //- add div with class modal-backdrop.fade.show to body
+              let modalBackdrop = document.createElement('div');
+              modalBackdrop.classList.add('modal-backdrop', 'fade', 'show');
+              document.body.appendChild(modalBackdrop);
+
+              //- forEach .mobile-card and get .mobile-card html and add to #popupCard .modal-content
+              let mobileCards = document.querySelectorAll('.mobile-card');
+              mobileCards.forEach(function(item) {
+                if (item.id == locations[i].id) {
+                  popupCard.querySelector('.modal-content .modal-body').innerHTML = item.innerHTML;
+                }
+              });
+
+              //- remove popupCard and modalBackdrop when click outside popupCard
+              popupCard.addEventListener('click', function(e) {
+                if (e.target == popupCard) {
+                  popupCard.classList.remove('show');
+                  popupCard.removeAttribute('aria-modal');
+                  popupCard.removeAttribute('role');
+                  popupCard.removeAttribute('style');
+                  document.body.classList.remove('modal-open');
+                  document.body.removeAttribute('style');
+                  modalBackdrop.remove();
+                }
+              });
+
+              //- remove popupCard and modalBackdrop when click .btn-close-mobile
+              popupCard.querySelector('.btn-close-mobile').addEventListener('click', function() {
+                popupCard.classList.remove('show');
+                popupCard.removeAttribute('aria-modal');
+                popupCard.removeAttribute('role');
+                popupCard.removeAttribute('style');
+                document.body.classList.remove('modal-open');
+                document.body.removeAttribute('style');
+                modalBackdrop.remove();
+              });
+            }
+          }
+        })(marker, i));
+      }
+    }
+
+    window.initMap = initMap;

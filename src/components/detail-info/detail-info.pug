@@ -216,7 +216,8 @@ mixin detail-info(type)
             .description-wrapper#map
               .detail-info__description
                 h3.title Location
-                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488799.48742795293!2d95.90137949756925!3d16.838952492696965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2z4YCb4YCU4YC64YCA4YCv4YCU4YC6!5e0!3m2!1smy!2smm!4v1674447243389!5m2!1smy!2smm', width='100%', height='400', style='border:0;', allowfullscreen='', loading='lazy', referrerpolicy='no-referrer-when-downgrade')
+                //- iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488799.48742795293!2d95.90137949756925!3d16.838952492696965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2z4YCb4YCU4YC64YCA4YCv4YCU4YC6!5e0!3m2!1smy!2smm!4v1674447243389!5m2!1smy!2smm', width='100%', height='400', style='border:0;', allowfullscreen='', loading='lazy', referrerpolicy='no-referrer-when-downgrade')
+                #detail-location(style="height: 400px; width: 100%;")
         .col-12.col-md-4 
           .detail-sidebar
             .sidebar__widget
@@ -301,4 +302,34 @@ mixin detail-info(type)
           .col-12.col-sm-6.col-lg-4
             +property-card('sale', '', '')
   script(type='text/javascript', src='https://platform-api.sharethis.com/js/sharethis.js#property=63e3b15eb2f3620019abbb00&product=inline-share-buttons&source=platform', async='async')
+
+  script.
+    let map;
+    let locations = [
+      {
+        lat: 16.8587543,
+        lng: 96.168996,
+      }
+    ]
+
+    //- add marker to the map base on location array
+    function addMarker(location) {
+      location.forEach((loc) => {
+        let marker = new google.maps.Marker({
+          position: loc,
+          map: map,
+        });
+      });
+    }
+
+    //- init map
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("detail-location"), {
+        center: locations[0],
+        zoom: 15,
+      });
+      addMarker(locations);
+    }
+
+    window.initMap = initMap;
 

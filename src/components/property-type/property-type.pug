@@ -1,6 +1,6 @@
 mixin property-type
-  #property-type-wrapper
-    input(type='hidden', id='type', name='type', value='')
+  #property-type-wrapper.property-type-wrapper-lg
+    input(type='hidden', id='type', name='type', value='', class="type-lg")
     .dropdown
       button.btn.btn-outline-secondary.dropdown-toggle.type-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
         span.type-toggle-label 
@@ -45,3 +45,16 @@ mixin property-type
                 .icon
                   img.img-fluid(src=require("@/assets/images/icons/industry-logo.svg") alt='image')
                 span Industrial Zone
+  #property-type-wrapper-sm
+    .input-group.icon-left
+      label.input-group-text(for=`type`)
+        img(src=require("@/assets/images/icons/property-type.svg"))
+      select.form-select.type-sm(name=`type`, id=`type`, aria-label='type', aria-describedby='type')
+        option(value='') Property Type
+        option(value='condo') Condo
+        option(value='apartment') Apartment
+        option(value='house') House
+        option(value='land') Land
+        option(value='hotel and restaurant') Hotel/ Restaurant
+        option(value='shop and office') Shop/ Office
+        option(value='industrial zone') Industrial Zone
