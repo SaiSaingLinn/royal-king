@@ -23,6 +23,7 @@ mixin header(type)
                       span +1 234 567 890
                   .contact-info__item
                     img(src=require("@/assets/images/icons/myanmar.png") alt='image')
+
                 #navbar-content-item
                   ul.navbar-nav.mr-auto.mb-2.mb-lg-0
                     li.nav-item
@@ -169,7 +170,7 @@ mixin header(type)
                       a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside') Contact For Owner
                       ul.dropdown-menu.shadow
                         li
-                          a.dropdown-item(href='contact-sale.html') For Sell
+                          a.dropdown-item.active(href='contact-sale.html') For Sell
                         li
                           a.dropdown-item(href='contact-rent.html') For Rent
                     li.nav-item.dropdown

@@ -214,6 +214,10 @@
                       color: $primary;
                       transform: translateX(5px);
                     }
+                    &.active {
+                      background: transparent;
+                      color: $primary;
+                    }
                   }
                   .mega-content {
                     padding: 20px;

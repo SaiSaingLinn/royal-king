@@ -510,13 +510,12 @@ mixin map-search(type, page)
         let marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
           map: map,
-          icon: locations[i].icon
+          icon: locations[i].icon,
         });
 
         //- add event listener to marker to show content
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
-            //- console.log(locations[i].id);
             //- forEach .city-content__item and remove class active and add class active to .city-content__item#locations[i].id
             //- and scroll to .city-content__item#locations[i].id
             let cityContentItems = document.querySelectorAll('.city-content__item');
