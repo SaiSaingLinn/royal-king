@@ -237,11 +237,11 @@ mixin detail-info(type)
                   .input-group.icon-left.mb-3
                     span#name.input-group-text
                       img(src=require('@/assets/images/icons/feather-user.svg'), alt="name")
-                    input.form-control(type='text', placeholder='Name', aria-label='Name', aria-describedby='name')
+                    input.form-control(type='text', placeholder='Name', aria-label='Name', aria-describedby='name', required='required')
                   .input-group.icon-left.mb-3
                     span#phone.input-group-text
                       img(src=require('@/assets/images/icons/feather-phone.svg'), alt="phone")
-                    input.form-control.isNumber(type='number', placeholder='Phone', aria-label='Phone', aria-describedby='phone')
+                    input.form-control.isNumber(type='number', placeholder='Phone', aria-label='Phone', aria-describedby='phone', required='required')
                   .input-group.icon-left.mb-3
                     span#email.input-group-text
                       img(src=require('@/assets/images/icons/feather-mail.svg'), alt="mail")
@@ -249,9 +249,9 @@ mixin detail-info(type)
                   .input-group.icon-left.mb-3
                     span#date.input-group-text
                       img(src=require('@/assets/images/icons/calendar.svg'), alt="calendar")
-                    input.form-control(type='text', id="datepicker", placeholder='Request Date', aria-label='Request Date', aria-describedby='date')
+                    input.form-control(type='text', id="datepicker", placeholder='Request Date', aria-label='Request Date', aria-describedby='date', required='required')
                   .mb-3
-                    textarea.form-control(type='text', placeholder='Message', aria-label='Message', aria-describedby='message')
+                    textarea.form-control(type='text', placeholder='Message', aria-label='Message', aria-describedby='message', required='required')
                   button.btn.btn-primary(type='submit') Send Now
             .sidebar__widget
               .sidebar__widget__wrapper

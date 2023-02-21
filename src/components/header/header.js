@@ -24,7 +24,11 @@ $(window).on('scroll', function () {
   }
 });
 
-// when #navbar-content.navbar-collapse is shown, fixed the body
-$('#navbar-content').on('shown.bs.collapse', function () {
+// if #navbar-content.navbar-collapse is shown fixed the body else remove the fixed
+$('#navbar-content').on('show.bs.collapse', function () {
   $('body').css('position', 'fixed');
+});
+
+$('#navbar-content').on('hide.bs.collapse', function () {
+  $('body').css('position', 'relative');
 });
