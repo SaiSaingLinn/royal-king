@@ -24,7 +24,7 @@ $('#list-btn').on('click', function () {
   $('#mobile-card-lists').show();
 });
 
-// // if click on #map-search marker open #popupCard modal
-// function openPopupCard() {
-//   $('#popupCard').modal('show');
-// }
+// remove mobile action wrapper on lg screen
+if (window.innerWidth > 991) {
+  $('.mobile-action-wrapper').remove();
+}

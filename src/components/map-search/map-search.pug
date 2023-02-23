@@ -540,9 +540,9 @@ mixin map-search(type, page)
               popupCard.classList.add('show');
               popupCard.setAttribute('aria-modal', 'true');
               popupCard.setAttribute('role', 'dialog')
-              popupCard.setAttribute('style', 'display: block; padding-right: 17px;');
+              popupCard.setAttribute('style', 'display: block;');
               document.body.classList.add('modal-open');
-              document.body.setAttribute('style', 'padding-right: 17px;');
+              //- document.body.setAttribute('style', 'padding-right: 17px;');
 
               //- add div with class modal-backdrop.fade.show to body
               let modalBackdrop = document.createElement('div');
@@ -577,7 +577,7 @@ mixin map-search(type, page)
                 popupCard.removeAttribute('role');
                 popupCard.removeAttribute('style');
                 document.body.classList.remove('modal-open');
-                document.body.removeAttribute('style');
+                //- document.body.removeAttribute('style');
                 modalBackdrop.remove();
               });
             }

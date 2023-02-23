@@ -1,6 +1,6 @@
 include ../search-form/search-form
 
-mixin search-tab(page)
+mixin search-tab(type, page)
   //- if page == 'search'
   //-   .mobile-action-wrapper
   //-     .container
@@ -29,7 +29,7 @@ mixin search-tab(page)
       .row 
         .col-12
           if page == 'search'
-            +search-form('sale', page)
+            +search-form(type, page)
           else
             .nav-tab-wrapper
               ul#pills-tab.nav.nav-search.nav-pills(role='tablist')

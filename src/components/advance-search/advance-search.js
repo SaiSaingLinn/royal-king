@@ -27,18 +27,10 @@
 //     }
 // });
 
-// initial hide advance-search-input and if click advance-search
-let advanceSearchInput = $('.advance-search-input');
-let advanceSearch = $('.advance-search');
-
-advanceSearchInput.hide();
-advanceSearch.on('click', function () {
-  // toggle parent's closest advance-search-input
-  $(this).parent().siblings('.advance-search-input').toggle();
-  // if advanced-search-input is show add class active to advance-search
-  if ($(this).parent().siblings('.advance-search-input').is(':visible')) {
-    $(this).addClass('active');
-  } else {
-    $(this).removeClass('active');
-  }
+// click on advance-search toggle add and remove active class in advance-search-input class
+// initial remove active class in advance-search-input class
+$('.advance-search-input').removeClass('active');
+$('.advance-search').on('click', function () {
+    $(this).toggleClass('active');
+    $(this).parent().siblings('.advance-search-input').toggleClass('active');
 });

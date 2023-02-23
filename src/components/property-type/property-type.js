@@ -16,7 +16,7 @@ $('#typeTabContent button').on('click', function (e) {
   $(this).addClass('active');
 });
 
-if (window.innerWidth < 576) {
+if (window.innerWidth < 992) {
   $('#property-type-wrapper .type-lg').remove();
 } else {
   $('#property-type-wrapper-sm .type-sm').remove();

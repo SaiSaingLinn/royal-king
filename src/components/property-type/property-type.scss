@@ -1,6 +1,6 @@
 #property-type-wrapper {
   display: none;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     display: block;
   }
   #type-option-wrapper {
@@ -95,7 +95,7 @@
 }
 #property-type-wrapper-sm {
   display: block;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     display: none;
   }
 }
