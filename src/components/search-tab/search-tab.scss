@@ -20,6 +20,7 @@
     background-color: #F5F5F5;
     .nav-tab-wrapper {
       transform: translateY(-15%);
+      margin-bottom: -30px;
       @include media-breakpoint-up(sm) {
         transform: translateY(-30%);
       }
