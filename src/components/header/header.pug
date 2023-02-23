@@ -203,7 +203,20 @@ mixin header(type)
                       a.nav-link(tel='091234567')
                         i.bi.bi-phone
                         | +95123456789
-                    li.nav-item.mobile-item
-                      .nav-link
-                        img(src=require("@/assets/images/icons/myanmar.png") alt='image')
-                        | Language
+                    li.nav-item.mobile-item.language
+                      //- .nav-link
+                      //-   img(src=require("@/assets/images/icons/myanmar.png") alt='image')
+                      //-   | Myanmar
+                      .dropdown
+                        button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                          img(src=require("@/assets/images/icons/myanmar.png") alt='image') 
+                          span Myanmar
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item.active(href='#')
+                              img(src=require("@/assets/images/icons/myanmar.png") alt='myanmar')
+                              span Myanmar
+                          li
+                            a.dropdown-item(href='#')
+                              img(src=require("@/assets/images/icons/english.png") alt='english')
+                              span English

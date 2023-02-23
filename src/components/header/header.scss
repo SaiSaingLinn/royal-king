@@ -196,6 +196,61 @@
                       margin-right: 15px;
                     }
                   }
+                  &.language {
+                    .dropdown {
+                      padding-top: 10px;
+                      // padding-bottom: 10px;
+                    }
+                    .dropdown-toggle {
+                      padding: 0;
+                      margin: 0;
+                      background: transparent;
+                      border: 0 none;
+                      outline: none;
+                      &:focus {
+                        box-shadow: none !important;
+                      }
+                      &::after {
+                        display: none;
+                      }
+                      img {
+                        margin-right: 5px;
+                      }
+                    }
+                    .dropdown-menu {
+                      min-width: auto;
+                      border-radius: 0;
+                      padding: 0;
+                      .dropdown-item {
+                        background: #FFF;
+                        display: flex;
+                        align-items: center;
+                        padding: 5px 10px;
+                        img {
+                          margin-right: 5px;
+                        }
+                        span {
+                          color: #000;
+                        }
+                        &.active {
+                          background: #FFF;
+                          color: #000;
+                          img {
+                            filter: grayscale(1);
+                          }
+                          span {
+                            color: #000;
+                          }
+                          &:hover {
+                            opacity: 1;
+                          }
+                        }
+                      }
+                    }
+                    // .dropdown-menu[data-bs-popper] {
+                    //   left: -30px;
+                    // }
+                  }
                 }
                 .nav-link {
                   color: $white;
