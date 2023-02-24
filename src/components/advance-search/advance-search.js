@@ -29,8 +29,8 @@
 
 // click on advance-search toggle add and remove active class in advance-search-input class
 // initial remove active class in advance-search-input class
-$('.advance-search-input').removeClass('active');
-$('.advance-search').on('click', function () {
-    $(this).toggleClass('active');
-    $(this).parent().siblings('.advance-search-input').toggleClass('active');
-});
+// $('.advance-search-input').removeClass('active');
+// $('.advance-search').on('click', function () {
+//     $(this).toggleClass('active');
+//     $(this).parent().siblings('.advance-search-input').toggleClass('active');
+// });

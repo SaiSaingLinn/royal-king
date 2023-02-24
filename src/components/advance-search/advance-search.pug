@@ -1,35 +1,36 @@
 mixin advance-search
   .search-row
     .search-col.advance-btn-wrap
-      button.btn.btn-light.advance-btn(type='button', class=`advance-search`)
+      button.btn.btn-light.advance-btn(type='button', data-bs-toggle='collapse', data-bs-target='#advanceSearch', aria-expanded='false', aria-controls='advanceSearch')
         i.bi.bi-plus.icon
         i.bi.bi-dash.icon
         | Advance Search
-    .advance-search-input
-      .search-row
-        .search-col
-          .input-group
-            .form-check
-              input#bankInstallment.form-check-input(type='checkbox', value='', name='bankInstallment')
-              label.form-check-label(for='bankInstallment')
-                | Bank Installment
-        .search-col 
-          .input-group.icon-left 
-            span#sqft.input-group-text
-              img(src=require("@/assets/images/icons/ruler.png"))
-            input.form-control(name='sqft', type='text', placeholder='sqft', aria-label='sqft', aria-describedby='sqft')
-        .search-col 
-          .input-group.icon-left 
-            span#floor.input-group-text
-              img(src=require("@/assets/images/icons/stairs.png"))
-            input.form-control(name='floor', type='text', placeholder='Floor', aria-label='floor', aria-describedby='floor')
-        .search-col 
-          .input-group.icon-left 
-            span#bedroom.input-group-text
-              img(src=require("@/assets/images/icons/single-bed.png"))
-            input.form-control(name='bedroom', type='text', placeholder='Bedroom', aria-label='bedroom', aria-describedby='bedroom')
-        .search-col 
-          .input-group.icon-left 
-            span#shower.input-group-text
-              img(src=require("@/assets/images/icons/shower.png"))
-            input.form-control(name='shower', type='text', placeholder='Shower', aria-label='shower', aria-describedby='shower')
+    #advanceSearch.collapse
+      .advance-search-input
+        .search-row
+          .search-col
+            .input-group
+              .form-check
+                input#bankInstallment.form-check-input(type='checkbox', value='', name='bankInstallment')
+                label.form-check-label(for='bankInstallment')
+                  | Bank Installment
+          .search-col 
+            .input-group.icon-left 
+              span#sqft.input-group-text
+                img(src=require("@/assets/images/icons/ruler.png"))
+              input.form-control(name='sqft', type='text', placeholder='sqft', aria-label='sqft', aria-describedby='sqft')
+          .search-col 
+            .input-group.icon-left 
+              span#floor.input-group-text
+                img(src=require("@/assets/images/icons/stairs.png"))
+              input.form-control(name='floor', type='text', placeholder='Floor', aria-label='floor', aria-describedby='floor')
+          .search-col 
+            .input-group.icon-left 
+              span#bedroom.input-group-text
+                img(src=require("@/assets/images/icons/single-bed.png"))
+              input.form-control(name='bedroom', type='text', placeholder='Bedroom', aria-label='bedroom', aria-describedby='bedroom')
+          .search-col 
+            .input-group.icon-left 
+              span#shower.input-group-text
+                img(src=require("@/assets/images/icons/shower.png"))
+              input.form-control(name='shower', type='text', placeholder='Shower', aria-label='shower', aria-describedby='shower')

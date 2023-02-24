@@ -101,6 +101,11 @@
             @include media-breakpoint-up(sm) {
               width: 150px;
             }
+            @include media-breakpoint-down(lg) {
+              &:hover {
+                background: transparent;
+              }
+            }
             &:hover {
               background-color: #0000001F;
               color: #000;
@@ -112,7 +117,7 @@
               box-shadow: none;
             }
             &.active {
-              background-color: #0000001F;
+              background-color: #0000001F !important;
               color: #000;
             }
           }

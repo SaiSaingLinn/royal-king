@@ -505,6 +505,8 @@ mixin map-search(type, page)
       }
       map.fitBounds(bounds);
 
+      let previousInfoWindow = false;
+
       //- add marker base on locations array
       for (let i = 0; i < locations.length; i++) {
         let marker = new google.maps.Marker({
@@ -531,6 +533,15 @@ mixin map-search(type, page)
                 });
               }
             });
+
+            //- open info window and close previous info window
+            if (previousInfoWindow) {
+              previousInfoWindow.close();
+            }
+            previousInfoWindow = new google.maps.InfoWindow({
+              content: locations[i].label
+            });
+            previousInfoWindow.open(map, marker);
 
             if (window.innerWidth < 992) {
               //- open bootstrap modal with id popupCard

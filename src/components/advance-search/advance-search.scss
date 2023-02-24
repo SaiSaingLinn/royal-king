@@ -16,13 +16,15 @@
       margin-right: 10px;
       flex: none;
     }
-    .bi-dash {
-      display: none;
+    &[aria-expanded="false"] {
+      .bi-dash {
+        display: none;
+      }
+      .bi-plus {
+        display: inline-flex;
+      }
     }
-    .bi-plus {
-      display: inline-flex;
-    }
-    &.active {
+    &[aria-expanded="true"] {
       .bi-dash {
         display: inline-flex;
       }
@@ -30,12 +32,5 @@
         display: none;
       }
     }
-  }
-}
-
-.advance-search-input {
-  display: none;
-  &.active {
-    display: block;
   }
 }
