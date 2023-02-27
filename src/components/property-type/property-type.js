@@ -2,6 +2,7 @@
 $('#typeTabContent button').on('click', function (e) {
   e.stopPropagation()
   var value = $(this).data('value');
+  var label = $(this).data('label');
   // find this input type
   var type = $(this).parents('.dropdown').siblings('#type');
   
@@ -18,7 +19,7 @@ $('#typeTabContent button').on('click', function (e) {
     type.val(value);
 
     // set value to parent .dropdown-toggle .type-toggle-label .label
-    $(this).parents('.dropdown').find('.type-toggle-label .label').text(value);
+    $(this).parents('.dropdown').find('.type-toggle-label .label').text(label);
     
     // add active class to button
     $(this).parents('.tab-content-wrap').find('button').removeClass('active');
