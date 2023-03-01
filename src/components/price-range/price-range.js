@@ -19,7 +19,10 @@ $('#priceTabContent button').on('click', function (e) {
     inputPriceRange.val('');
     inputPriceUnit.val('');
     $(this).removeClass('active');
-    $(this).parents('.dropdown').find('.price-toggle-label .label').text('Price');
+
+    // get label from .price-toggle-label .initial-label
+    var initialLabel = $(this).parents('.dropdown').find('.price-toggle-label .initial-label').text();
+    $(this).parents('.dropdown').find('.price-toggle-label .label').text(initialLabel);
   } else {
     // set value to parent input
     inputPriceRange.val(value);

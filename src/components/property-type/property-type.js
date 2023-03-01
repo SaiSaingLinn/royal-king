@@ -13,7 +13,9 @@ $('#typeTabContent button').on('click', function (e) {
   if ($(this).hasClass('active')) {
     type.val('');
     $(this).removeClass('active');
-    $(this).parents('.dropdown').find('.type-toggle-label .label').text('Property Type');
+    // get label from .type-toggle-label .initial-label
+    var initialLabel = $(this).parents('.dropdown').find('.type-toggle-label .initial-label').text();
+    $(this).parents('.dropdown').find('.type-toggle-label .label').text(initialLabel);
   } else {
     // set value to input 
     type.val(value);
