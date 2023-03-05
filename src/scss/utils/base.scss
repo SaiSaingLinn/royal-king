@@ -56,3 +56,9 @@ label {
     }
   }
 }
+
+.container, .container-xl, .container-lg, .container-md, .container-sm {
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+    max-width: 1140px !important;
+  }
+}

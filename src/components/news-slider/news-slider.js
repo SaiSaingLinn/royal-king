@@ -6,10 +6,12 @@ $('.news-slider').slick({
   dots: false,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1250,
       settings: {
         arrows: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
       }
     },
     {
