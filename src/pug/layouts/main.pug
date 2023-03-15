@@ -13,29 +13,28 @@ html(lang='en')
     meta(property='og:description', content=ogDescription)
     meta(property='og:image', content=ogImage)
     
-    //- script.
-    //-   document.onreadystatechange = function() {
-    //-     if (document.readyState !== "complete") {
-    //-       document.querySelector(
-    //-       "body").style.visibility = "hidden";
-    //-       document.querySelector(
-    //-       "#loader").style.visibility = "visible";
-    //-     } else {
-    //-       document.querySelector(
-    //-       "#loader").style.display = "none";
-    //-       document.querySelector(
-    //-       "body").style.visibility = "visible";
-    //-       document.querySelector(
-    //-       "body").style.overflow = "auto";
-    //-     }
-    //-   };
+    script.
+      document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+          document.querySelector(
+          "body").style.visibility = "hidden";
+          document.querySelector(
+          "#loader").style.visibility = "visible";
+        } else {
+          document.querySelector(
+          "#loader").style.display = "none";
+          document.querySelector(
+          "body").style.visibility = "visible";
+          document.querySelector(
+          "body").style.overflow = "auto";
+        }
+      };
     include ../utils/metas
     include ../utils/links
 
 
-  //- body(style='visibility: hidden; overflow: hidden;')
-  body
-    //- +loading
+  body(style='visibility: hidden; overflow: hidden;')
+    +loading
     .page-wrapper
       block content
       +footer
