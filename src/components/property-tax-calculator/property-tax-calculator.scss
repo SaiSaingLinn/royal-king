@@ -32,6 +32,7 @@
     color: #333333;
     text-transform: uppercase;
     transition: all .3s ease;
+    margin-bottom: 12px;
     @include media-breakpoint-down(sm) {
       width: 200px;
       padding-top: 15px;

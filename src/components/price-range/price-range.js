@@ -37,4 +37,7 @@ $('#priceTabContent button').on('click', function (e) {
     $(this).parents('.tab-content-wrap').find('button').removeClass('active');
     $(this).addClass('active');
   }
+
+  // close dropdown
+  $(this).parents('.dropdown').find('.dropdown-toggle').dropdown('toggle');
 });

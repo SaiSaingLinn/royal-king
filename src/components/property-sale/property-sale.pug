@@ -8,14 +8,267 @@ mixin property-sale
       .container 
         .row.card-lists-row
           .col-12.col-sm-6.col-lg-4 
-            +property-card('sale', 'bank', '')
+            //- +property-card('sale', 'bank', '')
+            a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
+              .card 
+                .card-image 
+                  img(src=require('@/assets/images/static/card.jpg') alt='image')
+                  .card-label 
+                    if type === 'rent'
+                      p.card-label-text.rent 
+                        | For Rent
+                    else if type === 'sale'
+                      p.card-label-text.sale 
+                        | For Sale
+                    else if type === 'sold'
+                      p.card-label-text.sold 
+                        | Sold Out
+                .card-content 
+                  .price-wrap
+                    p.card-price 800 Lakhs
+                    if bank === 'bank'
+                      p.card-bank Bank Installment
+                    if month === 'month'
+                      p.card-month / month
+                  h3.card-title 
+                    | Luxury Villa In Yangon
+                  p.card-location
+                    i.bi.bi-geo-alt
+                    | Mayangone Township, Yangon
+                  .card-footer 
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bed.svg"))
+                      p.card-footer-text 
+                        | 03
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bath.svg"))
+                      p.card-footer-text 
+                        | 02
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-apartment.svg"))
+                      p.card-footer-text 
+                        | Condo
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-square.svg"))
+                      p.card-footer-text 
+                        | 1800sqft
           .col-12.col-sm-6.col-lg-4
-            +property-card('sold', '', '')
+            a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
+              .card 
+                .card-image 
+                  img(src=require('@/assets/images/static/card.jpg') alt='image')
+                  .card-label 
+                    if type === 'rent'
+                      p.card-label-text.rent 
+                        | For Rent
+                    else if type === 'sale'
+                      p.card-label-text.sale 
+                        | For Sale
+                    else if type === 'sold'
+                      p.card-label-text.sold 
+                        | Sold Out
+                .card-content 
+                  .price-wrap
+                    //- p.card-price 800 Lakhs
+                    //- if bank === 'bank'
+                    //-   p.card-bank Bank Installment
+                    //- if month === 'month'
+                    //-   p.card-month / month
+                  h3.card-title 
+                    | Luxury Villa In Yangon
+                  p.card-location
+                    i.bi.bi-geo-alt
+                    | Mayangone Township, Yangon
+                  .card-footer 
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bed.svg"))
+                      p.card-footer-text 
+                        | 03
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bath.svg"))
+                      p.card-footer-text 
+                        | 02
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-apartment.svg"))
+                      p.card-footer-text 
+                        | Condo
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-square.svg"))
+                      p.card-footer-text 
+                        | 1800sqft
           .col-12.col-sm-6.col-lg-4
-            +property-card('sale', '', '')
+            a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
+              .card 
+                .card-image 
+                  img(src=require('@/assets/images/static/card.jpg') alt='image')
+                  .card-label 
+                    if type === 'rent'
+                      p.card-label-text.rent 
+                        | For Rent
+                    else if type === 'sale'
+                      p.card-label-text.sale 
+                        | For Sale
+                    else if type === 'sold'
+                      p.card-label-text.sold 
+                        | Sold Out
+                .card-content 
+                  .price-wrap
+                    p.card-price 800 Lakhs
+                    if bank === 'bank'
+                      p.card-bank Bank Installment
+                    if month === 'month'
+                      p.card-month / month
+                  h3.card-title 
+                    | Luxury Villa In Yangon
+                  p.card-location
+                    i.bi.bi-geo-alt
+                    | Mayangone Township, Yangon
+                  //- .card-footer 
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-bed.svg"))
+                  //-     p.card-footer-text 
+                  //-       | 03
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-bath.svg"))
+                  //-     p.card-footer-text 
+                  //-       | 02
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-apartment.svg"))
+                  //-     p.card-footer-text 
+                  //-       | Condo
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-square.svg"))
+                  //-     p.card-footer-text 
+                  //-       | 1800sqft
           .col-12.col-sm-6.col-lg-4
-            +property-card('sale', '', '')
+            a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
+              .card 
+                .card-image 
+                  img(src=require('@/assets/images/static/card.jpg') alt='image')
+                  .card-label 
+                    if type === 'rent'
+                      p.card-label-text.rent 
+                        | For Rent
+                    else if type === 'sale'
+                      p.card-label-text.sale 
+                        | For Sale
+                    else if type === 'sold'
+                      p.card-label-text.sold 
+                        | Sold Out
+                .card-content 
+                  .price-wrap
+                    p.card-price 800 Lakhs
+                    if bank === 'bank'
+                      p.card-bank Bank Installment
+                    if month === 'month'
+                      p.card-month / month
+                  h3.card-title 
+                    | Luxury Villa In Yangon
+                  //- p.card-location
+                  //-   i.bi.bi-geo-alt
+                  //-   | Mayangone Township, Yangon
+                  //- .card-footer 
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-bed.svg"))
+                  //-     p.card-footer-text 
+                  //-       | 03
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-bath.svg"))
+                  //-     p.card-footer-text 
+                  //-       | 02
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-apartment.svg"))
+                  //-     p.card-footer-text 
+                  //-       | Condo
+                  //-   .card-footer-icon 
+                  //-     img(src=require("@/assets/images/icons/card-square.svg"))
+                  //-     p.card-footer-text 
+                  //-       | 1800sqft
           .col-12.col-sm-6.col-lg-4
-            +property-card('sale', '', '')
+            a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
+              .card 
+                .card-image 
+                  img(src=require('@/assets/images/static/card.jpg') alt='image')
+                  .card-label 
+                    if type === 'rent'
+                      p.card-label-text.rent 
+                        | For Rent
+                    else if type === 'sale'
+                      p.card-label-text.sale 
+                        | For Sale
+                    else if type === 'sold'
+                      p.card-label-text.sold 
+                        | Sold Out
+                .card-content 
+                  .price-wrap
+                    p.card-price 800 Lakhs
+                    if bank === 'bank'
+                      p.card-bank Bank Installment
+                    if month === 'month'
+                      p.card-month / month
+                  h3.card-title 
+                    | Luxury Villa In Yangon
+                  p.card-location
+                    i.bi.bi-geo-alt
+                    | Mayangone Township, Yangon
+                  .card-footer 
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bed.svg"))
+                      p.card-footer-text 
+                        | 03
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bath.svg"))
+                      p.card-footer-text 
+                        | 02
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-apartment.svg"))
+                      p.card-footer-text 
+                        | Condo
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-square.svg"))
+                      p.card-footer-text 
+                        | 1800sqft
           .col-12.col-sm-6.col-lg-4
-            +property-card('sale', '', '')
+            a(href=`${type === 'rent' ? 'detail-rent.html' : type === 'sale' ? 'detail-sale.html' : 'detail-soldout.html'}`).card-wrapper 
+              .card 
+                .card-image 
+                  img(src=require('@/assets/images/static/card.jpg') alt='image')
+                  .card-label 
+                    if type === 'rent'
+                      p.card-label-text.rent 
+                        | For Rent
+                    else if type === 'sale'
+                      p.card-label-text.sale 
+                        | For Sale
+                    else if type === 'sold'
+                      p.card-label-text.sold 
+                        | Sold Out
+                .card-content 
+                  .price-wrap
+                    p.card-price 800 Lakhs
+                    if bank === 'bank'
+                      p.card-bank Bank Installment
+                    if month === 'month'
+                      p.card-month / month
+                  h3.card-title 
+                    | Luxury Villa In Yangon
+                  p.card-location
+                    i.bi.bi-geo-alt
+                    | Mayangone Township, Yangon
+                  .card-footer 
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bed.svg"))
+                      p.card-footer-text 
+                        | 03
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-bath.svg"))
+                      p.card-footer-text 
+                        | 02
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-apartment.svg"))
+                      p.card-footer-text 
+                        | Condo
+                    .card-footer-icon 
+                      img(src=require("@/assets/images/icons/card-square.svg"))
+                      p.card-footer-text 
+                        | 1800sqft

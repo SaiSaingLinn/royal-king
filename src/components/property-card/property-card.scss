@@ -1,5 +1,7 @@
 .card-wrapper {
   border-radius: 5px 5px 0 0;
+  display: flex;
+  height: 100%;
   &:hover {
     .card {
       .card-image {
@@ -92,11 +94,12 @@
         background: transparent;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         padding: 16px 0;
+        column-gap: 10px;
         .card-footer-icon {
           display: flex;
           align-items: center;
+          flex-basis: 25%;
           img {
             margin-right: 5px;
             width: 14px;
